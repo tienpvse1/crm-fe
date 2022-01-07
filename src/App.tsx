@@ -7,7 +7,15 @@ function App() {
   return (
     <div className="App">
       <h1>hello world</h1>
-      <iframe width="900" height="506" src="https://www.youtube.com/embed/ctwHgxzdtr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe
+        width="1024"
+        height="576"
+        src="https://www.youtube.com/embed/aCgP8BFjrw4"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }
