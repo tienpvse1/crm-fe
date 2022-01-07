@@ -16,7 +16,5 @@ jobs:
       run: docker-compose down
     - name: remove the existing image
       run: docker rmi -f crm-fe
-    - name: pull the new code
-      run: git pull
     - name: start the server
       run: docker-compose up -d
