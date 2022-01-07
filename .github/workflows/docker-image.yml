@@ -1,0 +1,20 @@
+name: Docker Image CICD
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: stop the server
+      run: docker-compose down
+    - name: remove the existing image
+      run: docker rmi -f crm-fe
+    - name: start the server
+      run: docker-compose up -d
