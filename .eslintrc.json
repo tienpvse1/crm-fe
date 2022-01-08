@@ -25,6 +25,7 @@
       1,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
+    "quotes": ["error", "single"],
     "prettier/prettier": [
       "error",
       {
