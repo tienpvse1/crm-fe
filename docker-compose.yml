@@ -10,4 +10,4 @@ services:
       NODE_ENV: production
       VITE_BE_BASE_URL: http://kienvt.tech/api/v1
     ports:
-      - 5000:5000
+      - 80:5000
