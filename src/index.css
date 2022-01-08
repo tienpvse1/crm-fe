@@ -1,13 +1,175 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(./image/background-login-page.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper-login-form {
+    text-align: center;
+    margin-right: 150px;
+    width: 350px;
+    height: 520px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 18px;
+}
+
+.header-login-form {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-login-form h1 {
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.header-login-form span {
+    color: black;
+    margin-top: -10px;
+}
+
+.login-form {
+    width: 70%;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.checkbox-login-form-forgot {
+    float: left;
+}
+
+.login-form-button {
+    width: 56%;
+    font-size: 16px !important;
+    font-weight: 400;
+    height: 35px !important;
+    background-color: #0047ab !important;
+    border-color: #0047ab !important;
+}
+
+.login-form-button:hover {
+    background-color: #0073cf !important;
+    border-color: #0073cf !important;
+}
+
+.content-login-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-input {
+    border-radius: 10px !important;
+    height: 40px;
+}
+
+.ant-divider-horizontal.ant-divider-with-text-center::before,
+.ant-divider-horizontal.ant-divider-with-text-center::after {
+    border-top: 1px solid black !important;
+    width: 10% !important;
+    min-width: 15%;
+}
+
+.ant-divider-horizontal.ant-divider-with-text-center {
+    padding-top: -15px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-divider-inner-text {
+    font-size: 13px;
+}
+
+.footer-login-from .ant-btn {
+    margin: 5px;
+}
+
+.footer-login-from {
+    padding-bottom: 15px;
+}
+
+a {
+    color: #0047ab !important;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #0073cf !important;
+}
+
+
+/*  */
+
+.wrapper-signup-form {
+    margin-right: 70px;
+    width: 650px;
+    height: 580px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 18px;
+}
+
+.content-signup-form {
+    padding: 25px 60px 15px;
+}
+
+.ant-select-selector {
+    border-radius: 10px !important;
+    height: 40px !important;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.ant-input-password {
+    border-radius: 10px !important;
+    height: 48px;
+}
+
+.input-phone-number .ant-input {
+    border-radius: 0px 10px 10px 0px !important;
+}
+
+.ant-input-group-addon {
+    border-radius: 10px 0px 0px 10px !important;
+}
+
+.signup-form-button {
+    width: 30%;
+    font-size: 16px !important;
+    font-weight: 400;
+    height: 35px !important;
+    background-color: #0047ab !important;
+    border-color: #0047ab !important;
+}
+
+.signup-form-button:hover {
+    background-color: #0073cf !important;
+    border-color: #0073cf !important;
+}
+
+.ant-checkbox-inner {
+    border-radius: 5px !important;
+    height: 16px !important;
+    width: 16px !important;
+}
+
+.ant-select-arrow svg {
+    color: black;
 }
