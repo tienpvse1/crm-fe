@@ -1,22 +1,15 @@
-import { useState } from "react";
-import "./App.css";
+import './App.css';
+import { getUser } from './modules/account/get/account.get';
+import { createAccount } from './modules/account/mutation/account.post';
+import { authenticateUser } from './modules/auth/mutation/auth.post';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
+    <div className='App'>
       <h1>hello world</h1>
-      <h2>hello world 2</h2>
-      <iframe
-        width="1024"
-        height="576"
-        src="https://www.youtube.com/embed/aCgP8BFjrw4"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+      <button onClick={authenticateUser}>Authenticate</button>
+      <button onClick={getUser}>get</button>
+      <button onClick={createAccount}>create</button>
     </div>
   );
 }
