@@ -1,21 +1,15 @@
 import './App.css';
-import { TOKEN } from './constance/cookie';
-import { getCookies, setCookie } from './test/cookie';
+import { getUser } from './modules/account/get/account.get';
+import { createAccount } from './modules/account/mutation/account.post';
+import { authenticateUser } from './modules/auth/mutation/auth.post';
 
 function App() {
-  const handleClick = () => {
-    setCookie(TOKEN, 'bearer ey', 7);
-  };
-  const handleClick2 = () => {
-    console.log(getCookies(TOKEN));
-  };
-
   return (
     <div className='App'>
       <h1>hello world</h1>
-
-      <button onClick={handleClick}>set cookie</button>
-      <button onClick={handleClick2}>view</button>
+      <button onClick={authenticateUser}>Authenticate</button>
+      <button onClick={getUser}>get</button>
+      <button onClick={createAccount}>create</button>
     </div>
   );
 }

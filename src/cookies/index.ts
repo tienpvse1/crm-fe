@@ -1,3 +1,5 @@
+import { EXPIRATION, TOKEN } from '../constance/cookie';
+
 export const getCookies = (field = '') => {
   const rawCookieString = document.cookie;
   const rawCookies: string[] = rawCookieString.split(';');
@@ -19,4 +21,12 @@ export const setCookie = (name: string, value: string, expireDates: number) => {
   d.setTime(d.getTime() + expireDates * 24 * 60 * 60 * 1000);
   const expires = 'expires=' + d.toUTCString();
   document.cookie = name + '=' + value + ';' + expires + ';path=/';
+};
+
+export const getToken = () => {
+  return getCookies(TOKEN)[0].token;
+};
+
+export const setToken = (token: string) => {
+  return setCookie(TOKEN, token, EXPIRATION);
 };

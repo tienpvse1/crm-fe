@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noUnusedLocals": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
   },
   "include": ["./src"]
 }

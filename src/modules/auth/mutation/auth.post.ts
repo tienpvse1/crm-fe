@@ -1,7 +1,13 @@
+import { instance } from '../../../axios';
 import { controllers } from '../../../constance/controllers';
-import { Axios } from '../../../server/axios';
+import { setToken } from '../../../cookies';
+
 const { AUTH } = controllers;
-const authenticateUser = () => {
-  const { instance } = new Axios();
-  instance.post(AUTH);
+export const authenticateUser = async () => {
+  const { data } = await instance.post(AUTH, {
+    email: 'good66612@gmail.com',
+    password: 'tienpvse',
+  });
+  setToken(data.data);
+  return data;
 };
