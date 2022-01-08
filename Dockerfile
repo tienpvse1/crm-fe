@@ -6,5 +6,4 @@ RUN npm install
 COPY . .
 RUN npm run build
 EXPOSE 5000
-RUN chown -R node /usr/src/app
 CMD ["npm", "run", "preview"]
