@@ -24,7 +24,7 @@ export const setCookie = (name: string, value: string, expireDates: number) => {
 };
 
 export const getToken = () => {
-  return getCookies(TOKEN)[0].token;
+  return getCookies(TOKEN)[0]?.token;
 };
 
 export const setToken = (token: string) => {
