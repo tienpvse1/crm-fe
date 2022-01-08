@@ -7,5 +7,5 @@ export const getUser = async () => {
   const { data } = await instance.get(`${ACCOUNT}/custom`, {
     data: {},
   });
-  console.log(data);
+  return data;
 };

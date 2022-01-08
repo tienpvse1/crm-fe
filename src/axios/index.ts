@@ -14,7 +14,6 @@ export class Axios {
   instance: AxiosInstance;
 
   constructor() {
-    console.log(getToken());
     this.instance = axios.create({
       baseURL,
       headers: {
