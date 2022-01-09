@@ -1,15 +1,12 @@
-import { Card, Col, Row } from 'antd';
-import { DollarCircleTwoTone, DropboxOutlined, LineChartOutlined, MoreOutlined, TagOutlined } from '@ant-design/icons';
+import { Col, Row } from 'antd';
+import { controllers } from '../../../constance/controllers';
 import 'antd/dist/antd.css';
-import "../../dashboard/card/card.css";
-import { CardMoney } from './card-money';
-import { CardOrders } from './card-orders';
-import { CardSale } from './card-sales';
-import { CardTicket } from './card-ticket';
+import { CardMoney, CardOrders, CardSale, CardTicket } from './card';
+
+const { SIZE_CARD, SIZE_OFFSET } = controllers;
+
 export const CardBoard = () => {
-    const SIZE_CARD = 6;
     const SIZE_GUTTER = 18;
-    const SIZE_OFFSET = 0;
     return (
         <>
             <div className="site-card-wrapper">

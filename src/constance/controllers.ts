@@ -8,6 +8,12 @@ export enum controllers {
   CONTACT = 'contact',
   CONTACT_FORM = 'contactForm',
   CONTACT_FORM_FIELD = 'contact-form-field',
+  //size, space, offset of cards
+  SIZE_CARD = 6,
+  SIZE_OFFSET = 0,
+  //X-axis & Y-axis of line-chart
+  X_FIELD = 'year',
+  Y_FIELD = 'gdp',
   //data fake
   STATISTIC_DATA_FIELD = 'statistic-data',
 }

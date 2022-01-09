@@ -1,13 +1,8 @@
 import { Line } from '@ant-design/plots';
-import { useEffect } from 'react';
+import { controllers } from '../../../../constance/controllers';
 import { data } from '../../../../interfaces/statistic/line-chart';
-import "../line-chart/line-chart.css"
+const { X_FIELD, Y_FIELD } = controllers;
 export const LineChart = () => {
-    const X_FIELD = 'year';
-    const Y_FIELD = 'gdp';
-    useEffect(() => {
-        fetch;
-    }, []);
     const config = {
         data,
         xField: X_FIELD,

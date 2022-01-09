@@ -1,4 +1,3 @@
-import '../progress-chart/progress-chart.css';
 import { Tooltip, Progress, Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 
