@@ -8,7 +8,7 @@ import { envVars } from '../env/var.env';
 export const LoginPage = () => {
   const { AUTH } = controllers;
   const handleGoogleClick = () => {
-    window.location.href = `${envVars.VITE_BE_BASE_URL}/${AUTH}/google`;
+    window.location.href = `${envVars.VITE_BE_BASE_URL}${AUTH}/google`;
   };
   return (
     <div className='wrapper-background'>
