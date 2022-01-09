@@ -10,17 +10,8 @@ export const HomePage = () => {
   // }
 
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>hello world</h1>
-      <button onClick={authenticateUser}>Authenticate</button>
-      <button onClick={getUser}>get</button>
-      <button onClick={createAccount}>create</button>
-    </div>
-=======
     <>
       <DashBoard />
     </>
->>>>>>> 0af1ba170b70dac0c8cfe6e302c352306e51f77e
   );
 };
