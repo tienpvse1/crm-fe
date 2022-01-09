@@ -1,4 +1,4 @@
-body {
+.wrapper-background {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-image: url(./image/background-login-page.jpg);
@@ -15,13 +15,13 @@ body {
     margin-right: 150px;
     width: 350px;
     height: 520px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     color: white;
     border-radius: 18px;
 }
 
-.header-login-form {
+.header-form {
     font-size: 14px;
     display: flex;
     flex-direction: column;
@@ -29,12 +29,12 @@ body {
     align-items: center;
 }
 
-.header-login-form h1 {
+.header-form h1 {
     margin-top: 40px;
     font-size: 30px;
 }
 
-.header-login-form span {
+.header-form span {
     color: black;
     margin-top: -10px;
 }
@@ -119,7 +119,7 @@ a:hover {
     margin-right: 70px;
     width: 650px;
     height: 580px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     color: white;
     border-radius: 18px;
@@ -172,4 +172,9 @@ a:hover {
 
 .ant-select-arrow svg {
     color: black;
+}
+
+.ant-checkbox-wrapper {
+    font-size: 13.4px !important;
+    margin-top: 14px!important;
 }

@@ -4,36 +4,16 @@ export const SelectBoxResidence = () => {
     const residences = [
         {
             value: 'tphcm',
-            label: 'TP.HCM',
-            children: [
-                {
-                    value: 'hangzhou',
-                    label: 'Hangzhou',
-                    children: [
-                        {
-                            value: 'xihu',
-                            label: 'West Lake',
-                        },
-                    ],
-                },
-            ],
+            label: 'TP.HCM'
         },
         {
             value: 'hanoi',
-            label: 'Hà Nội',
-            children: [
-                {
-                    value: 'nanjing',
-                    label: 'Nanjing',
-                    children: [
-                        {
-                            value: 'zhonghuamen',
-                            label: 'Zhong Hua Men',
-                        },
-                    ],
-                },
-            ],
+            label: 'Hà Nội'
         },
+        {
+            value: 'tpthuduc',
+            label: 'TP. Thủ Đức'
+        }
     ];
 
     return (

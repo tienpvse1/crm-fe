@@ -1,39 +1,72 @@
 import { Cascader } from 'antd';
 
 export const SelectBoxDistrict = () => {
+
+    const childrenDistrict = [];
+
+    for (let index = 1; index < 13; index++) {
+        childrenDistrict.push({
+            value: index,
+            label: `Quận ${index}`
+        });
+    }
+
     const district = [
         {
-            value: '1',
-            label: 'Quận 1',
-            children: [
-                {
-                    value: 'hangzhou',
-                    label: 'Hangzhou',
-                    children: [
-                        {
-                            value: 'xihu',
-                            label: 'West Lake',
-                        },
-                    ],
-                },
-            ],
+            value: 'district',
+            label: 'Quận số',
+            children: childrenDistrict
         },
         {
-            value: '2',
-            label: 'Quận 2',
+            value: 'district2',
+            label: 'Quận chữ',
             children: [
                 {
-                    value: 'nanjing',
-                    label: 'Nanjing',
-                    children: [
-                        {
-                            value: 'zhonghuamen',
-                            label: 'Zhong Hua Men',
-                        },
-                    ],
+                    value: '13',
+                    label: 'Quận Bình Tân'
                 },
-            ],
-        },
+                {
+                    value: '14',
+                    label: 'Quận Bình Thạnh'
+                },
+                {
+                    value: '15',
+                    label: 'Quận Gò Vấp'
+                },
+                {
+                    value: '16',
+                    label: 'Quận Phú Nhuận'
+                },
+                {
+                    value: '17',
+                    label: 'Quận Tân Bình'
+                },
+                {
+                    value: '18',
+                    label: 'Quận Tân Phú'
+                },
+                {
+                    value: '19',
+                    label: 'Huyện Bình Chánh'
+                },
+                {
+                    value: '20',
+                    label: 'Huyện Cần Giờ'
+                },
+                {
+                    value: '21',
+                    label: 'Huyện Củ Chi'
+                },
+                {
+                    value: '22',
+                    label: 'Huyện Hóc Môn'
+                },
+                {
+                    value: '23',
+                    label: 'Huyện Nhà Bè'
+                }
+            ]
+        }
     ];
 
     return (

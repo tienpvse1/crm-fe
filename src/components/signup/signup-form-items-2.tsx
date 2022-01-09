@@ -14,9 +14,7 @@ export const SignUpFormItems2 = () => {
             </Form.Item>
             <Form.Item
                 name="district"
-                rules={[
-                    { type: 'array', required: true, message: 'Xin hãy chọn quận, huyện!' },
-                ]}
+                rules={[{ type: 'array' }]}
             >
                 <SelectBoxDistrict />
             </Form.Item>
