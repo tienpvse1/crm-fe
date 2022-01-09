@@ -1,0 +1,8 @@
+.line-chart {
+  background-color: white;
+  -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+  margin: 0 20px;
+  border-radius: 8px;
+  padding: 20px;
+}

@@ -8,4 +8,6 @@ export enum controllers {
   CONTACT = 'contact',
   CONTACT_FORM = 'contactForm',
   CONTACT_FORM_FIELD = 'contact-form-field',
+  //data fake
+  STATISTIC_DATA_FIELD = 'statistic-data',
 }

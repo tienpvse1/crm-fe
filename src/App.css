@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+.dash-board {
+  background-color: #f5f8fa;
+  display: flex;
+}
+
+.container {
+  flex: 4;
+}
+
+.statistic {
+  padding: 0px 10px 30px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
