@@ -5,17 +5,18 @@ import { createAccount } from '../modules/account/mutation/account.post';
 import { authenticateUser } from '../modules/auth/mutation/auth.post';
 
 export const HomePage = () => {
-  const token = getToken();
-  if (!token) {
-    return <Navigate to='/login' />;
-  }
+  //TODO: uncomment this before commit please
+  // const token = getToken();
+  // if (!token) {
+  //   return <Navigate to='/login' />;
+  // }
 
   return (
-    <>
+    <div>
       <h1>hello world</h1>
       <button onClick={authenticateUser}>Authenticate</button>
       <button onClick={getUser}>get</button>
       <button onClick={createAccount}>create</button>
-    </>
+    </div>
   );
 };
