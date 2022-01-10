@@ -6,13 +6,13 @@ export const LoginFormItems = () => {
         <>
             <Form.Item
                 name="username"
-                rules={[{ required: true, message: 'Please input your Username!' }]}
+                rules={[{ required: true, message: 'Xin hãy nhập username!' }]}
             >
                 <Input placeholder="ID người dùng" />
             </Form.Item>
             <Form.Item
                 name="password"
-                rules={[{ required: true, message: 'Please input your Password!' }]}
+                rules={[{ required: true, message: 'Xin hãy nhập mật khẩu!' }]}
             >
                 <Input
                     type="password"

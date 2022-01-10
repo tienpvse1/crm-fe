@@ -45,6 +45,7 @@
 
 .login-form-forgot {
     float: right;
+    margin-top: 13px !important;
 }
 
 .checkbox-login-form-forgot {
