@@ -7,53 +7,27 @@ import {
   WalletOutlined,
   UserOutlined,
   CalendarOutlined,
-  MenuOutlined,
+  PlusOutlined,
+  CodeSandboxOutlined,
 } from '@ant-design/icons';
+import { LogoSider } from './logo-sider';
 
-interface Menu_1_Props {
+interface Menu1Props {
   onCollapse: () => void;
   style: object;
+  collapsed: boolean;
 }
 
-export const Menu_1 = ({ onCollapse, style }: Menu_1_Props) => {
+export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
   return (
     <>
+
+      <LogoSider onCollapse={onCollapse} collapsed={collapsed} />
       <Menu
+        defaultOpenKeys={['sub1']}
         defaultSelectedKeys={['home']}
         mode='inline'
       >
-        <Menu.Item
-          icon={<MenuOutlined
-            onClick={onCollapse}
-            style={{
-              fontSize: 20,
-            }}
-          />}
-          key='crmp'
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            height: '80px',
-            fontSize: 24,
-            fontWeight: 'bold',
-            color: 'rgba(0,0,0,0.6)',
-          }}
-        >
-          <div className='logo'>
-            <img
-              src='/crm.png'
-              height={40}
-              width={40}
-              style={{
-                marginLeft: 20,
-                marginRight: '10px',
-              }}
-            />{' '}
-            CRM<span style={{ color: '#4d83e0' }}>P</span>
-          </div>
-
-        </Menu.Item>
-
         <Menu.Item key='home' style={style} icon={<HomeOutlined style={style} />}>
           Home
         </Menu.Item>
@@ -96,6 +70,82 @@ export const Menu_1 = ({ onCollapse, style }: Menu_1_Props) => {
         >
           Schedule
         </Menu.Item>
+
+        {/* ----------------------------------------------------------- */}
+
+        <Menu.SubMenu
+          key={'sub1'}
+          title={
+            <div
+              style={{
+                fontSize: 20,
+                fontWeight: 'bold',
+                color: 'rgba(0,0,0,0.6)',
+              }}
+            >
+              Integrations
+            </div>
+          }
+          icon={<CodeSandboxOutlined style={style} />}
+        >
+          <Menu.Item
+            icon={<img
+              src={'/slack.png'}
+              height={20}
+              width={20}
+              style={{
+                marginRight: 10,
+              }}
+            />}
+            key='slack'
+            style={style}>
+            {' '}
+            Slack
+          </Menu.Item>
+
+          <Menu.Item
+            icon={<img
+              src={'/notion.png'}
+              height={20}
+              width={20}
+              style={{
+                marginRight: 10,
+              }}
+            />}
+            key='notion'
+            style={style}>
+
+            Notion
+          </Menu.Item>
+          <Menu.Item
+            icon={<img
+              src={'/google-drive.png'}
+              height={20}
+              width={20}
+              style={{
+                marginRight: 10,
+              }}
+            />}
+            key='googleDrive'
+            style={style}>
+
+            Google drive
+          </Menu.Item>
+          <Menu.Item
+            key='add'
+            icon={
+              <PlusOutlined
+                width={20}
+                style={{
+                  marginRight: 8,
+                }}
+              />
+            }
+            style={style}
+          >
+            Add plugin
+          </Menu.Item>
+        </Menu.SubMenu>
       </Menu>
     </>
   )

@@ -1,5 +1,4 @@
-import { Menu_1 } from './menu-1';
-import { Menu_2 } from './menu-2';
+import { Menu1 } from './menu-1';
 
 const style = {
   fontSize: 18,
@@ -7,13 +6,13 @@ const style = {
 
 interface MenuNavigatorProps {
   onCollapse: () => void;
+  collapsed: boolean;
 }
 
-export const MenuNavigator = ({ onCollapse }: MenuNavigatorProps) => {
+export const MenuNavigator = ({ onCollapse, collapsed }: MenuNavigatorProps) => {
   return (
     <>
-      <Menu_1 onCollapse={onCollapse} style={style} />
-      <Menu_2 style={style} />
+      <Menu1 onCollapse={onCollapse} collapsed={collapsed} style={style} />
     </>
   );
 };

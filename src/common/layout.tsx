@@ -11,15 +11,16 @@ export const LayoutApp: React.FC<LayoutProps> = () => {
   const [collapsed, onCollapse] = useToggle();
 
   return (
-    <Layout style={{ minHeight: '100vh' }}>
+    <Layout  style={{ minHeight: '100vh' }}>
       <Sider
+        className='layout-sider'
         trigger={null}
         theme='light'
-        width={255}
+        width={250}
         collapsible
         collapsed={collapsed}
       >
-        <MenuNavigator onCollapse={onCollapse} />
+        <MenuNavigator onCollapse={onCollapse} collapsed={collapsed} />
       </Sider>
 
       <ContentApp >
