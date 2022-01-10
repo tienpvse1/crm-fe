@@ -4,7 +4,7 @@ import { ProgressChart } from '../components/dashboard/statistic/progress-chart/
 
 export const DashBoard = () => {
 	return (
-		<div>
+		<>
 			<div className='dash-board'>
 				<div className='container'>
 					<CardBoard />
@@ -14,6 +14,6 @@ export const DashBoard = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
