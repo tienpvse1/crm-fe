@@ -193,7 +193,6 @@ button {
     margin-left: 5px;
     padding: 16px;
     cursor: pointer;
-    transition: padding .3s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .layout-sider.ant-menu-inline-collapsed {
