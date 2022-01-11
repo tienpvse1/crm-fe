@@ -5,18 +5,18 @@ export const LoginFormItems = () => {
     <>
       <Form.Item
         name='username'
-        rules={[{ required: true, message: 'Please input your Username!' }]}
+        rules={[{ required: true, message: 'Xin hãy nhập id!' }]}
       >
         <Input placeholder='ID người dùng' />
       </Form.Item>
       <Form.Item
         name='password'
-        rules={[{ required: true, message: 'Please input your Password!' }]}
+        rules={[{ required: true, message: 'Xin hãy nhập mật khẩu!' }]}
       >
         <Input type='password' placeholder='Mật khẩu' />
       </Form.Item>
       <Form.Item style={{ marginTop: '-15px' }}>
-        <Form.Item name='remember' valuePropName='undefined' noStyle>
+        <Form.Item name='remember' valuePropName='checked' noStyle>
           <Checkbox className='checkbox-login-form-forgot'>Ghi nhớ</Checkbox>
         </Form.Item>
 
