@@ -6,7 +6,6 @@ export const SignUpFormItems1 = () => {
     <>
       <Form.Item
         name='fullname'
-        rules={[{ required: true, message: 'Xin hãy nhập họ tên!' }]}
       >
         <Input placeholder='Họ và tên' />
       </Form.Item>

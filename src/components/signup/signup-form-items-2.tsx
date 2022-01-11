@@ -8,7 +8,6 @@ export const SignUpFormItems2 = () => {
     <>
       <Form.Item
         name='gender'
-        rules={[{ required: true, message: 'Xin hãy chọn giới tính!' }]}
       >
         <SelectBoxGender />
       </Form.Item>
