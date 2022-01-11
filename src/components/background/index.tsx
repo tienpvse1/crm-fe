@@ -1,6 +1,6 @@
 import animationData from '../../animation/background.json';
 import Lottie from 'react-lottie';
-
+import { motion } from 'framer-motion';
 export const LottieBackGround = () => {
 
   const defaultOptions = {
@@ -12,8 +12,14 @@ export const LottieBackGround = () => {
     }
   };
   return (
-    <div className='lottie-bg'>
+    <motion.div
+      className='lottie-bg'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.5, duration: 1 }}
+    >
       <Lottie options={defaultOptions} height={550} width={550} />
-    </div >
+
+    </motion.div>
   )
 }

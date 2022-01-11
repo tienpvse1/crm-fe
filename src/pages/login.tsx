@@ -6,6 +6,7 @@ import '../index.css';
 import { controllers } from '../constance/controllers';
 import { envVars } from '../env/var.env';
 import { LottieBackGround } from '../components/background';
+import { motion } from 'framer-motion'
 
 export const LoginPage = () => {
   const { AUTH } = controllers;
@@ -17,7 +18,12 @@ export const LoginPage = () => {
   return (
     <div className='wrapper-background'>
       <LottieBackGround />
-      <div className='wrapper-login-form'>
+      <motion.div
+        initial={{ y: '-100vw' }}
+        animate={{ y: 1 }}
+        transition={{ delay: 0.1 ,type: 'spring', stiffness: 45 }}
+        className='wrapper-login-form'
+      >
         <div className='header-form'>
           <h1>Đăng Nhập</h1>
           <span>
@@ -40,7 +46,7 @@ export const LoginPage = () => {
           </div>
         </div>
         <a href=''>Chính sách bảo mật</a>
-      </div>
-    </div>
+      </motion.div>
+    </div >
   );
 };

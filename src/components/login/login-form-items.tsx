@@ -16,8 +16,8 @@ export const LoginFormItems = () => {
         <Input type='password' placeholder='Mật khẩu' />
       </Form.Item>
       <Form.Item style={{ marginTop: '-15px' }}>
-        <Form.Item name='remember' valuePropName='undefined' noStyle>
-          <Checkbox checked className='checkbox-login-form-forgot'>Ghi nhớ</Checkbox>
+        <Form.Item name='remember' valuePropName='checked' noStyle>
+          <Checkbox className='checkbox-login-form-forgot'>Ghi nhớ</Checkbox>
         </Form.Item>
 
         <a className='login-form-forgot' href=''>

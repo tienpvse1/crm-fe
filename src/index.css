@@ -1,7 +1,6 @@
 .wrapper-background {
     font-family: 'Roboto', sans-serif;
-    /* background-image: linear-gradient(top left, #2E3192, #1BFFFF); */
-    background-image: linear-gradient(to top right, #014871, #D7EDE2);
+    background-image: url(../public/wave-haikei9.svg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;

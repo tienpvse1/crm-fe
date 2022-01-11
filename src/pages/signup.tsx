@@ -1,13 +1,19 @@
 import { Link } from 'react-router-dom';
 import { LottieBackGround } from '../components/background';
 import { SignUpForm } from '../components/signup/signup-form';
+import { motion } from 'framer-motion'
 import '../index.css';
 
 export const SignUpPage = () => {
   return (
     <div className='wrapper-background'>
       <LottieBackGround />
-      <div className='wrapper-signup-form'>
+      <motion.div
+        initial={{ y: '-100vw' }}
+        animate={{ y: 1 }}
+        transition={{ delay: 0.1, type: 'spring', stiffness: 37 }}
+        className='wrapper-signup-form'
+      >
         <div className='header-form'>
           <h1>Đăng Ký</h1>
           <span>
@@ -22,7 +28,7 @@ export const SignUpPage = () => {
             <SignUpForm />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
