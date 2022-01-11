@@ -5,14 +5,25 @@ import GoogleButton from 'react-google-button';
 import '../index.css';
 import { controllers } from '../constance/controllers';
 import { envVars } from '../env/var.env';
+import { LottieBackGround } from '../components/background';
+import { motion } from 'framer-motion'
+
 export const LoginPage = () => {
   const { AUTH } = controllers;
   const handleGoogleClick = () => {
     window.location.href = `${envVars.VITE_BE_BASE_URL}${AUTH}/google`;
   };
+
+
   return (
     <div className='wrapper-background'>
-      <div className='wrapper-login-form'>
+      <LottieBackGround />
+      <motion.div
+        initial={{ y: '-100vw' }}
+        animate={{ y: 1 }}
+        transition={{ delay: 0.1 ,type: 'spring', stiffness: 45 }}
+        className='wrapper-login-form'
+      >
         <div className='header-form'>
           <h1>Đăng Nhập</h1>
           <span>
@@ -23,7 +34,7 @@ export const LoginPage = () => {
         <div className='content-login-form'>
           <LoginForm />
         </div>
-        <Divider>ĐĂNG NHẬP VỚI</Divider>
+        <Divider>HOẶC</Divider>
         <div className='footer-login-from'>
           <div
             style={{
@@ -35,7 +46,7 @@ export const LoginPage = () => {
           </div>
         </div>
         <a href=''>Chính sách bảo mật</a>
-      </div>
-    </div>
+      </motion.div>
+    </div >
   );
 };
