@@ -20,6 +20,7 @@
     backdrop-filter: blur(10px);
     color: white;
     border-radius: 18px;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
 }
 
 .header-form {
@@ -118,6 +119,7 @@ a:hover {
 /*  */
 
 .wrapper-signup-form {
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
     z-index: 100;
     margin-right: 70px;
     width: 650px;
