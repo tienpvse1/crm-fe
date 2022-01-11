@@ -1,10 +1,35 @@
 import { Cascader } from 'antd';
 
 export const SelectBoxDistrict = () => {
-  const childrenDistrict = [];
+  const childrenDistrict = [
+    {
+      value: 13,
+      label: 'Quận Bình Tân',
+    },
+    {
+      value: 14,
+      label: 'Quận Bình Thạnh',
+    },
+    {
+      value: 15,
+      label: 'Quận Gò Vấp',
+    },
+    {
+      value: 16,
+      label: 'Quận Phú Nhuận',
+    },
+    {
+      value: 17,
+      label: 'Quận Tân Bình',
+    },
+    {
+      value: 18,
+      label: 'Quận Tân Phú',
+    }
+  ];
 
-  for (let index = 1; index < 13; index++) {
-    childrenDistrict.push({
+  for (let index = 12; index > 0; index--) {
+    childrenDistrict.unshift({
       value: index,
       label: `Quận ${index}`,
     });
@@ -13,37 +38,13 @@ export const SelectBoxDistrict = () => {
   const district = [
     {
       value: 'district',
-      label: 'Quận số',
+      label: 'Quận',
       children: childrenDistrict,
     },
     {
       value: 'district2',
-      label: 'Quận chữ',
+      label: 'Huyện',
       children: [
-        {
-          value: '13',
-          label: 'Quận Bình Tân',
-        },
-        {
-          value: '14',
-          label: 'Quận Bình Thạnh',
-        },
-        {
-          value: '15',
-          label: 'Quận Gò Vấp',
-        },
-        {
-          value: '16',
-          label: 'Quận Phú Nhuận',
-        },
-        {
-          value: '17',
-          label: 'Quận Tân Bình',
-        },
-        {
-          value: '18',
-          label: 'Quận Tân Phú',
-        },
         {
           value: '19',
           label: 'Huyện Bình Chánh',
