@@ -1,7 +1,7 @@
 .wrapper-background {
-    margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url(./image/background-login-page.jpg);
+    /* background-image: linear-gradient(top left, #2E3192, #1BFFFF); */
+    background-image: linear-gradient(to top right, #014871, #D7EDE2);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -11,11 +11,12 @@
 }
 
 .wrapper-login-form {
+    z-index: 100;
     text-align: center;
     margin-right: 150px;
     width: 350px;
     height: 520px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     color: white;
     border-radius: 18px;
@@ -45,6 +46,7 @@
 
 .login-form-forgot {
     float: right;
+    margin-top: 13px !important;
 }
 
 .checkbox-login-form-forgot {
@@ -86,7 +88,7 @@
 
 .ant-divider-horizontal.ant-divider-with-text-center {
     padding-top: -15px;
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -116,6 +118,7 @@ a:hover {
 /*  */
 
 .wrapper-signup-form {
+    z-index: 100;
     margin-right: 70px;
     width: 650px;
     height: 580px;
@@ -177,4 +180,12 @@ a:hover {
 .ant-checkbox-wrapper {
     font-size: 13.4px !important;
     margin-top: 14px!important;
+}
+
+.lottie-bg {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-right: 500px;
 }

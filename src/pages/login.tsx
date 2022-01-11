@@ -5,13 +5,18 @@ import GoogleButton from 'react-google-button';
 import '../index.css';
 import { controllers } from '../constance/controllers';
 import { envVars } from '../env/var.env';
+import { LottieBackGround } from '../components/background';
+
 export const LoginPage = () => {
   const { AUTH } = controllers;
   const handleGoogleClick = () => {
     window.location.href = `${envVars.VITE_BE_BASE_URL}${AUTH}/google`;
   };
+
+
   return (
     <div className='wrapper-background'>
+      <LottieBackGround />
       <div className='wrapper-login-form'>
         <div className='header-form'>
           <h1>Đăng Nhập</h1>
@@ -23,7 +28,7 @@ export const LoginPage = () => {
         <div className='content-login-form'>
           <LoginForm />
         </div>
-        <Divider>ĐĂNG NHẬP VỚI</Divider>
+        <Divider>HOẶC</Divider>
         <div className='footer-login-from'>
           <div
             style={{

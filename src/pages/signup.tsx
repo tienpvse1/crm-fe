@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import { LottieBackGround } from '../components/background';
 import { SignUpForm } from '../components/signup/signup-form';
 import '../index.css';
 
 export const SignUpPage = () => {
   return (
     <div className='wrapper-background'>
+      <LottieBackGround />
       <div className='wrapper-signup-form'>
         <div className='header-form'>
           <h1>Đăng Ký</h1>
