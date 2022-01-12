@@ -9,7 +9,6 @@ export const ContentApp: React.FC = ({ children }) => {
             {/* Put Header App here  */}
             <HeaderApp />
 
-
             {/* Content */}
             <Content style={{ margin: '0 16px' }}>
                 <Breadcrumb style={{ margin: '16px 0' }}>
