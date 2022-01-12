@@ -10,7 +10,7 @@ export const SignUpPage = () => {
       <LottieBackGround />
       <motion.div
         initial={{ y: '-100vw' }}
-        animate={{ y: 1 }}
+        animate={{ y: -5 }}
         transition={{ delay: 0.1, type: 'spring', stiffness: 37 }}
         className='wrapper-signup-form'
       >
