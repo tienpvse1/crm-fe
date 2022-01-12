@@ -26,7 +26,7 @@ export const LineChart = () => {
     };
     return (
         <div className="line-chart">
-            <Line height={300} width={850} {...config} />
+            <Line height={300} width={750} {...config} />
         </div>
     )
 }
