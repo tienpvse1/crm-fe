@@ -7,7 +7,7 @@ export const DropdownProfile = () => {
             <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                 <Avatar src='https://joeschmoe.io/api/v1/random'
                     size={30} icon="user" style={{ marginBottom: '8px' }} />
-                <span style={{ fontSize: '16px', color: 'black', paddingLeft: '12px', color: 'rgba(0,0,0,0.8)' }}>Tokuda</span>
+                <span style={{ fontSize: '16px', color: 'rgba(0,0,0,0.8)', paddingLeft: '12px' }}>Tokuda</span>
             </a>
         </Dropdown>
     )
