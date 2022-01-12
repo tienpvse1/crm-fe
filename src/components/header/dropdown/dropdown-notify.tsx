@@ -1,14 +1,14 @@
 import { Menu, Tabs } from "antd"
-import { ListMessage } from "./list/list-message";
-import { ListNotify } from "./list/list-notify";
-import { ListToDo } from "./list/list-todo";
+import { ListMessage } from "../list/list-message";
+import { ListNotify } from "../list/list-notify";
+import { ListToDo } from "../list/list-todo";
 
 const { TabPane } = Tabs;
 
 
 export const DropdownContent = () => {
     return (
-        <Menu style={{ padding: '0 20px 20px 20px', marginTop: '15px ', width: '325px' }}>
+        <Menu style={{ padding: '0 20px 20px 20px', marginTop: '21px ', width: '325px', borderRadius: '10px' }}>
             <Tabs defaultActiveKey="1" centered>
                 <TabPane tab={
                     <span>
