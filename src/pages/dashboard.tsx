@@ -1,19 +1,17 @@
-import { CardBoard } from '../components/dashboard/cards/cards'
-import { LineChart } from '../components/dashboard/statistic/line-chart/line-chart'
-import { ProgressChart } from '../components/dashboard/statistic/progress-chart/progress-chart'
+import { CardBoard, LineChart, ProgressChart } from '@components/dashboard';
 
 export const DashBoard = () => {
-	return (
-		<>
-			<div className='dash-board'>
-				<div className='container'>
-					<CardBoard />
-					<div className='statistic'>
-						<LineChart />
-						<ProgressChart />
-					</div>
-				</div>
-			</div>
-		</>
-	)
-}
+  return (
+    <>
+      <div className='dash-board'>
+        <div className='container'>
+          <CardBoard />
+          <div className='statistic'>
+            <LineChart />
+            <ProgressChart />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};

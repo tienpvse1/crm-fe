@@ -21,7 +21,8 @@
     "react-lottie": "^1.2.3",
     "react-query": "^3.34.7",
     "react-router-dom": "^6.2.1",
-    "vite": "^2.7.2"
+    "vite": "^2.7.2",
+    "vite-aliases": "^0.8.7"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
