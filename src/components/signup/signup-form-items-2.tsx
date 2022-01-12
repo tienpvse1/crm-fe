@@ -8,7 +8,6 @@ export const SignUpFormItems2 = () => {
     <>
       <Form.Item
         name='gender'
-        rules={[{ required: true, message: 'Xin hãy chọn giới tính!' }]}
       >
         <SelectBoxGender />
       </Form.Item>
@@ -18,7 +17,6 @@ export const SignUpFormItems2 = () => {
 
       <Form.Item
         name='phone'
-        rules={[{ required: true, message: 'Xin hãy nhập số điện thoại!' }]}
       >
         <div className='input-phone-number'>
           <Input placeholder='Nhập số ĐT' addonBefore={<SelectBoxPrefix />} />

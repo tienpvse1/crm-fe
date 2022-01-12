@@ -1,12 +1,14 @@
 import { Breadcrumb, Layout } from 'antd'
 import { FooterApp } from './footer';
-const { Content, Header } = Layout;
+import { HeaderApp } from './header';
+const { Content } = Layout;
 
 export const ContentApp: React.FC = ({ children }) => {
     return (
         <Layout className="site-layout">
             {/* Put Header App here  */}
-            <Header className="site-layout-background" style={{ padding: 0 }} />
+            <HeaderApp />
+
 
             {/* Content */}
             <Content style={{ margin: '0 16px' }}>
