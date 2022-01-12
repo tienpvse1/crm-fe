@@ -18,7 +18,7 @@ export const LottieBackGround = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5, duration: 1 }}
     >
-      <Lottie options={defaultOptions} height={550} width={550} />
+      <Lottie options={defaultOptions} height={550} width={720} />
 
     </motion.div>
   )
