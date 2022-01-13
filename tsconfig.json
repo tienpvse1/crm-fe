@@ -20,11 +20,11 @@
     "baseUrl": ".",
     "paths": {
       "@animation/*": ["./src/animation/*"],
-      "@axios/*": ["./src/axios/*"],
+      "@axios": ["./src/axios"],
       "@common/*": ["./src/common/*"],
       "@components/*": ["./src/components/*"],
       "@constance/*": ["./src/constance/*"],
-      "@cookies/*": ["./src/cookies/*"],
+      "@cookies": ["./src/cookies"],
       "@env/*": ["./src/env/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@interfaces/*": ["./src/interfaces/*"],

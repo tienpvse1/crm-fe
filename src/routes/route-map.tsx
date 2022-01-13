@@ -1,3 +1,4 @@
+import { Pipeline } from '@pages/pipeline';
 import { RouteObject } from 'react-router-dom';
 import { LayoutApp } from '../common/layout';
 import { HomePage } from '../pages/home';
@@ -20,6 +21,10 @@ export const route: RouteObject[] = [
       {
         path: '/',
         element: <HomePage />,
+      },
+      {
+        path: '/pipeline',
+        element: <Pipeline />,
       },
     ],
   },

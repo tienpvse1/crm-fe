@@ -1,5 +1,5 @@
+import { MenuHeader } from '@components/header/menu-header';
 import { Layout } from 'antd';
-import { MenuHeader } from '../components/header/menu-header';
 const { Header } = Layout;
 
 
