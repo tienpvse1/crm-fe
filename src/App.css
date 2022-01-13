@@ -8,6 +8,13 @@
   padding: 20px;
 }
 
+.contact-container .ant-table {
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+}
+
 .progress-chart {
   display: flex;
   width: 23.5%;
