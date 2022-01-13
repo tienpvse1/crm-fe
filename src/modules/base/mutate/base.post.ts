@@ -30,7 +30,6 @@ export const useBasePost = <T>(
             },
           ],
         };
-        console.log(something);
         queryClient.setQueryData<Response<T[]>>(key, something);
         return { previousItems: something };
       }
