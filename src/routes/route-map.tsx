@@ -18,7 +18,7 @@ export const route: RouteObject[] = [
     element: <LayoutApp />,
     children: [
       {
-        path: '/',
+        index: true,
         element: <HomePage />,
       },
     ],
