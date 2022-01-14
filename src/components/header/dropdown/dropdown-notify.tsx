@@ -8,7 +8,14 @@ const { TabPane } = Tabs;
 
 export const DropdownContent = () => {
     return (
-        <Menu style={{ padding: '0 20px 20px 20px', marginTop: '21px ', width: '325px', borderRadius: '10px' }}>
+        <Menu
+            style={{
+                padding: '0 20px 20px 20px',
+                marginTop: '21px ',
+                width: '325px',
+                borderRadius: '3px',
+                boxShadow: '0px 3px 3px 3px rgba(0, 0, 0, 0.15)'
+            }}>
             <Tabs defaultActiveKey="1" centered>
                 <TabPane tab={
                     <span>

@@ -5,7 +5,12 @@ import { DropdownContent } from './dropdown/dropdown-notify';
 
 export const DropdownNotify = () => {
 	return (
-		<Dropdown overlay={<DropdownContent />} trigger={['click']} placement='bottomRight' destroyPopupOnHide>
+		<Dropdown
+			overlay={<DropdownContent />}
+			trigger={['click']}
+			placement='bottomRight'
+			destroyPopupOnHide
+		>
 			<a onClick={e => e.preventDefault()}>
 				<Badge count={5}>
 					<BellOutlined style={{ fontSize: '20px', color: 'rgba(0,0,0,0.8)' }} />

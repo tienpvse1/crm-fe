@@ -12,7 +12,7 @@ export const CardOrders = () => {
                     <span className='featureRate'>+$8,700
                     </span>
                 </Col>
-                <Col span={8} className='feature-cover'>
+                <Col span={8}>
                     <DropboxOutlined className='featureIcon' />
                 </Col>
             </Row>

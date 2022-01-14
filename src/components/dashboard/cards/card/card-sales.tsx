@@ -12,7 +12,7 @@ export const CardSale = () => {
                     <span className='featureRate'>+$2,700
                     </span>
                 </Col>
-                <Col span={8} className='feature-cover'>
+                <Col span={8}>
                     <LineChartOutlined className='featureIcon' />
                 </Col>
             </Row>

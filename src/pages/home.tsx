@@ -12,9 +12,9 @@ export const HomePage = () => {
 
   return (
     <>
-      {/* <DashBoard /> */}
+      <DashBoard />
       {/* <PipelineItem /> */}
-      <PipelineWrapper />
+      {/* <PipelineWrapper /> */}
     </>
   );
 };
