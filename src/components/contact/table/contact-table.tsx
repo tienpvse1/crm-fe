@@ -24,7 +24,7 @@ export const ContactData = () => {
 				...rowSelection,
 			}}
 			title={title}
-			pagination={{ position: ['bottomRight'] }}
+			pagination={{ position: ['bottomCenter'], style:{fontSize: 15} }}
 			dataSource={data}
 			size={'large'}
 		>
@@ -49,11 +49,11 @@ export const ContactData = () => {
 			)} />
 			<Column title='Action' dataIndex='action' key='action' render={() => (
 				<Space size="small" style={{ width: '100%' }}>
-					<Button type="primary" shape='round'>
+					<Button type="ghost" shape='round'>
 						<FormOutlined />
 					</Button>
 
-					<Button type="primary" shape='round' danger>
+					<Button type="default" shape='round' danger>
 						<DeleteOutlined />
 					</Button>
 				</Space>

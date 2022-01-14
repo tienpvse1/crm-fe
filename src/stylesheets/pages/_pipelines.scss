@@ -1,5 +1,4 @@
 .pipeline-column-header {
-    width: 250px;
     background-color: #E4E4E7;
     border-radius: 5px;
     height: 40px;
@@ -8,5 +7,14 @@
 }
 
 .pipeline-column {
-    padding-left: 18px;
+    width: 330px;
+    padding: 10px;
+    margin: 7px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.scroll-menu {
+    overflow: auto;
+    white-space: nowrap;
 }

@@ -1,6 +1,7 @@
 .line-chart {
     width: 72%;
     background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
     box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
     margin: 0 20px;
@@ -13,6 +14,7 @@
     width: 23.5%;
     height: 340px;
     border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -42,7 +44,6 @@
 
 .site-card-wrapper {
     padding: 30px;
-    background-color: #f5f8fa;
 }
 
 .feature-container {
@@ -120,7 +121,6 @@
 }
 
 .dash-board {
-    background-color: #f5f8fa;
     display: flex;
 }
 

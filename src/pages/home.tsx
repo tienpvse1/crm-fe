@@ -1,4 +1,3 @@
-import { PipelineWrapper } from '@components/pipelines/wrapper';
 import { Navigate } from 'react-router-dom';
 import { getToken } from '../cookies';
 import { DashBoard } from './dashboard';
@@ -13,8 +12,6 @@ export const HomePage = () => {
   return (
     <>
       <DashBoard />
-      {/* <PipelineItem /> */}
-      {/* <PipelineWrapper /> */}
     </>
   );
 };

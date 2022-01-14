@@ -1,5 +1,6 @@
 import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd'
 import { PipeLineColumn } from './column';
+
 export const PipelineWrapper = () => {
 
   const pipeLinesData = [
@@ -80,27 +81,34 @@ export const PipelineWrapper = () => {
   return (
 
     <DragDropContext onDragEnd={onDragEnd}>
+      
       <Droppable
         droppableId="all-columns"
         direction="horizontal"
         type="column"
       >
+
         {(provided) => (
-          <div
-            {...provided.droppableProps}
-            ref={provided.innerRef}
-            style={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'row'
-            }}
-          >
-            {
-              pipeLinesData.map((pipeline, index) =>
+          <div className='scroll-menu'>
+            <div
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+              style={{
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'row',
+                marginLeft: 5
+              }}
+            >
+              
+              {pipeLinesData.map((pipeline, index) =>
                 <PipeLineColumn index={index} key={pipeline.id} pipeline={pipeline} />)
-            }
-            {provided.placeholder}
-          </div>
+              }
+              
+              {provided.placeholder}
+            </div>
+            </div>
+           
         )}
       </Droppable>
     </DragDropContext>
