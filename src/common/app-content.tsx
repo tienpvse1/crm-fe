@@ -15,7 +15,7 @@ export const ContentApp: React.FC = ({ children }) => {
                     <Breadcrumb.Item>User</Breadcrumb.Item>
                     <Breadcrumb.Item>Bill</Breadcrumb.Item>
                 </Breadcrumb>
-                <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+                <div className="site-layout-background" style={{ padding: 20, minHeight: 360 }}>
                     {children}
                 </div>
             </Content>
