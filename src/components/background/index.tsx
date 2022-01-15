@@ -1,15 +1,19 @@
-import animationData from '../../animation/background.json';
-import Lottie from 'react-lottie';
 import { motion } from 'framer-motion';
-export const LottieBackGround = () => {
+import Lottie, { Options } from 'react-lottie';
 
-  const defaultOptions = {
+interface ILottieBackGround {
+  data: any;
+}
+
+export const LottieBackGround: React.FC<ILottieBackGround> = ({ data }) => {
+  const defaultOptions: Options = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: data,
+
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: 'xMidYMid slice',
+    },
   };
   return (
     <motion.div
@@ -19,7 +23,6 @@ export const LottieBackGround = () => {
       transition={{ delay: 0.5, duration: 1 }}
     >
       <Lottie options={defaultOptions} height={550} width={720} />
-
     </motion.div>
-  )
-}
+  );
+};

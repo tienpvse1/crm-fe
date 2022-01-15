@@ -16,6 +16,7 @@ export const route: RouteObject[] = [
     path: '/signup',
     element: <SignUpPage />,
   },
+
   {
     path: '/',
     element: <LayoutApp />,
@@ -30,12 +31,16 @@ export const route: RouteObject[] = [
       },
       {
         path: 'pipeline',
-        element: <PipelineWrapper />
+        element: <PipelineWrapper />,
       },
       {
         path: 'email',
         element: <EmailCompose />,
       },
     ],
+  },
+  {
+    path: '/*',
+    element: <h1>Page not found</h1>,
   },
 ];
