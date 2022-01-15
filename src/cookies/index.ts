@@ -30,3 +30,7 @@ export const getToken = () => {
 export const setToken = (token: string) => {
   return setCookie(TOKEN, token, EXPIRATION);
 };
+
+export const removeCookie = (token: string) => {
+  document.cookie = `${token}= ; expires = ${Date.now()}`;
+};

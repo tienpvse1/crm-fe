@@ -11,11 +11,11 @@ export const ContentApp: React.FC = ({ children }) => {
 
             {/* Content */}
             <Content style={{ margin: '0 16px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
+                <Breadcrumb style={{ margin: '20px 0px 0px 25px', fontSize: 19 }}>
                     <Breadcrumb.Item>User</Breadcrumb.Item>
                     <Breadcrumb.Item>Bill</Breadcrumb.Item>
                 </Breadcrumb>
-                <div className="site-layout-background" style={{ padding: 20, minHeight: 360 }}>
+                <div className="site-layout-background">
                     {children}
                 </div>
             </Content>

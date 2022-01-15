@@ -1,17 +1,17 @@
-import { Menu } from 'antd';
 import {
-  HomeOutlined,
-  SolutionOutlined,
-  StockOutlined,
-  TagsOutlined,
-  WalletOutlined,
-  UserOutlined,
+  BranchesOutlined,
   CalendarOutlined,
-  PlusOutlined,
   CodeSandboxOutlined,
+  ContactsOutlined,
+  HomeOutlined,
+  PlusOutlined,
+  StockOutlined,
+  UserOutlined,
+  WalletOutlined,
 } from '@ant-design/icons';
-import { LogoSider } from './logo-sider';
+import { Menu } from 'antd';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { LogoSider } from './logo-sider';
 
 interface Menu1Props {
   onCollapse: () => void;
@@ -34,31 +34,27 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
         <Menu.Item
           key='home'
           style={style}
+          onClick={() => navigate('/')}
           icon={<HomeOutlined style={style} />}
         >
           Home
         </Menu.Item>
 
         <Menu.Item
-          key='analytic'
+          key='contact'
+          onClick={() => navigate('/contact')}
           style={style}
-          icon={<StockOutlined style={style} />}
+          icon={<ContactsOutlined style={style} />}
         >
-          Analytic
+          Contact
         </Menu.Item>
         <Menu.Item
-          key='product'
+          key='pipeline'
+          onClick={() => navigate('/pipeline')}
           style={style}
-          icon={<TagsOutlined style={style} />}
+          icon={<BranchesOutlined style={style} />}
         >
-          Product
-        </Menu.Item>
-        <Menu.Item
-          key='order'
-          style={style}
-          icon={<SolutionOutlined style={style} />}
-        >
-          Order
+          Pipeline
         </Menu.Item>
         <Menu.Item
           key='payment'
