@@ -54,10 +54,6 @@ export const EmailCompose: React.FC = ({}) => {
   // its template from database will be apply to the database
   const loadTemplates = async () => {
     const data = await findAllTemplates();
-    console.log(
-      '🚀 ~ file: email-compose.tsx ~ line 59 ~ loadTemplates ~ data',
-      data
-    );
 
     setTemplates(data.data);
     setIsModelOpen(true);
