@@ -12,7 +12,7 @@ export const CardTicket = () => {
                     <span className='featureRate negative'>-$1,200
                     </span>
                 </Col>
-                <Col span={8} className='feature-cover'>
+                <Col span={8}>
                     <TagOutlined className='featureIcon' />
                 </Col>
             </Row>

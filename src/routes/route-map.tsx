@@ -1,3 +1,4 @@
+import { PipelineWrapper } from '@components/pipelines/wrapper';
 import { Contact } from '@pages/contact';
 import { EmailCompose } from '@pages/email-compose';
 import { RouteObject } from 'react-router-dom';
@@ -26,6 +27,10 @@ export const route: RouteObject[] = [
       {
         path: 'contact',
         element: <Contact />,
+      },
+      {
+        path: 'pipeline',
+        element: <PipelineWrapper />
       },
       {
         path: 'email',

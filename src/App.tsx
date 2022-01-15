@@ -1,5 +1,5 @@
 import { useRoutes } from 'react-router-dom';
-import './App.css';
+import './stylesheets/App.scss';
 import { route } from './routes/route-map';
 function App() {
   const elements = useRoutes(route);

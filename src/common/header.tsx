@@ -6,10 +6,7 @@ const { Header } = Layout;
 
 export const HeaderApp = () => {
     return (
-        <Header className="site-layout-background" style={{
-            display: 'flex',
-            backgroundColor: 'white'
-        }}>
+        <Header className="header-layout-background">
             <div style={{ flex: '1 1 0%' }}></div>
             <div>
                 <MenuHeader />
