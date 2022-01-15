@@ -1,0 +1,137 @@
+.line-chart {
+    width: 72%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+    margin: 0 20px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.progress-chart {
+    display: flex;
+    width: 23.5%;
+    height: 340px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+}
+
+.chart {
+    flex-direction: column;
+    margin: 30px 0px;
+    padding-bottom: 10px;
+}
+
+.title {
+    display: flex;
+}
+
+.moneyInfo {
+    display: flex;
+    font-size: 27px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #244791;
+}
+
+.site-card-wrapper {
+    padding: 30px;
+}
+
+.feature-container {
+    align-items: center;
+}
+
+.featured-item {
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+}
+
+.ant-card-head-title {
+    color: #244791;
+    font-weight: bold;
+}
+
+.feature-cover {
+    padding-left: 7px !important;
+}
+
+.feature-info {
+    font-size: 25px;
+    font-weight: 500;
+    color: #244791;
+}
+
+.featureRate {
+    color: green;
+}
+
+.featureRate.negative {
+    color: red;
+}
+
+.featureIcon {
+    font-size: 50px;
+    color: #3c76f1 !important;
+}
+
+.featureSub {
+    display: flex;
+    color: #d8e4fc;
+    font-weight: 400;
+}
+
+.moneySub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #6391f4;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    background-color: #244791;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+    &.second {
+        background-color: #6391f4;
+    }
+}
+
+.dash-board {
+    display: flex;
+}
+
+.container {
+    flex: 4;
+    width: 100vw;
+}
+
+.statistic {
+    width: 100%;
+    padding: 0px 14px 30px 10px;
+    display: flex;
+    align-items: center;
+}

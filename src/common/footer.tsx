@@ -3,6 +3,6 @@ const { Footer } = Layout;
 
 export const FooterApp = () => {
     return (
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center', backgroundColor: 'white' }}>VJAA CRM Design ©2022 Created by FPTU</Footer>
     )
 }

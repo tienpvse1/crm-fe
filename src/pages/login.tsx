@@ -2,7 +2,6 @@ import { Divider } from 'antd';
 import { Link } from 'react-router-dom';
 import { LoginForm } from '../components/login/login-form';
 import GoogleButton from 'react-google-button';
-import '../index.css';
 import { controllers } from '../constance/controllers';
 import { envVars } from '../env/var.env';
 import { LottieBackGround } from '../components/background';

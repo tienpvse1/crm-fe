@@ -11,6 +11,7 @@ const { Sider } = Layout;
 export const LayoutApp: React.FC<LayoutProps> = () => {
   const [collapsed, onCollapse] = useToggle();
   const token = getCookies(TOKEN);
+  if (!token[0]) return <Navigate to={'/login'} />;
   // @ts-ignore
   if (!token[0].token) return <Navigate to={'/login'} />;
   return (

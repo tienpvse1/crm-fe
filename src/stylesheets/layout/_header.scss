@@ -1,0 +1,17 @@
+.header-layout-background {
+    display: flex !important;
+    background-color: white !important;
+    box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    height: 67px !important;
+    z-index: 2;
+}
+
+.items-dropdown-profile:hover {
+    background-color: #e6f7ff !important;
+}
+
+.items-dropdown-span {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+}

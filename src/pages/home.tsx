@@ -4,8 +4,6 @@ export const HomePage = () => {
   return (
     <>
       <DashBoard />
-      {/* <PipelineItem /> */}
-      {/* <PipelineWrapper /> */}
     </>
   );
 };

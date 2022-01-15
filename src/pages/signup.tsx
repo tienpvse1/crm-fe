@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { LottieBackGround } from '../components/background';
 import { SignUpForm } from '../components/signup/signup-form';
 import { motion } from 'framer-motion'
-import '../index.css';
 
 export const SignUpPage = () => {
   return (
