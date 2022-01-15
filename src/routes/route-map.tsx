@@ -1,4 +1,4 @@
-import { PipelineWrapper } from '@components/pipelines/wrapper';
+import { Pipeline } from '@components/pipelines/pipeline';
 import { Contact } from '@pages/contact';
 import { RouteObject } from 'react-router-dom';
 import { LayoutApp } from '../common/layout';
@@ -29,7 +29,7 @@ export const route: RouteObject[] = [
       },
       {
         path: 'pipeline',
-        element: <PipelineWrapper />
+        element: <Pipeline />
       }
     ],
   },

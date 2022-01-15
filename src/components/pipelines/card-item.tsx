@@ -1,7 +1,14 @@
 import { ClockCircleOutlined, FlagOutlined, MessageOutlined } from "@ant-design/icons";
 import { Avatar, Card, Divider, Tag } from "antd"
 const { Meta } = Card;
-export const PipelineItem = () => {
+
+interface PipelineCardItemProps {
+  dataCardPipeline: any;
+
+}
+
+
+export const PipelineCardItem = ({ dataCardPipeline }: PipelineCardItemProps) => {
   return (
     <>
       <Card
@@ -16,7 +23,7 @@ export const PipelineItem = () => {
         <Meta
           title={
             <>
-              <span style={{ fontWeight: 300 }}><FlagOutlined style={{ color: 'green' }} /> Abm - 002</span>
+              <span style={{ fontWeight: 300 }}><FlagOutlined style={{ color: 'green' }} /> Abm - {`${dataCardPipeline.id}`}</span>
               <Tag color={'blue'} style={{ marginLeft: 10, borderRadius: 5 }}>Design</Tag>
             </>
           }
