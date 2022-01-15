@@ -14,6 +14,7 @@ export const LayoutApp: React.FC<LayoutProps> = () => {
   if (!token[0]) return <Navigate to={'/login'} />;
   // @ts-ignore
   if (!token[0].token) return <Navigate to={'/login'} />;
+  
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider
