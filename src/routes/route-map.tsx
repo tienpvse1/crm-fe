@@ -1,5 +1,6 @@
 import { PipelineWrapper } from '@components/pipelines/wrapper';
 import { Contact } from '@pages/contact';
+import { DashBoard } from '@pages/dashboard';
 import { EmailCompose } from '@pages/email-compose';
 import { RouteObject } from 'react-router-dom';
 import { LayoutApp } from '../common/layout';
@@ -23,6 +24,10 @@ export const route: RouteObject[] = [
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: 'dashboard',
+        element: <DashBoard />
       },
       {
         path: 'contact',
