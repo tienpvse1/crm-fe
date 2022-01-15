@@ -8,10 +8,10 @@ interface PipeLineColumnProps {
 
 export const PipeLineColumn = ({ pipeline, index }: PipeLineColumnProps) => {
   return (
-    <Draggable draggableId={pipeline.id} index={index}>
+    <Draggable draggableId={pipeline.name} index={index}>
       {(providedColumn) => (
         <div
-          className="wrapper-pipeline-column"
+          className="wrapper-draggable-pipeline-column"
           ref={providedColumn.innerRef}
           {...providedColumn.draggableProps}
         >

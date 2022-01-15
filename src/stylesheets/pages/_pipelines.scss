@@ -1,11 +1,14 @@
-.droppable-wrapper-columns {
-    width: 110%;
+.wrapper-droppable-columns {
     display: flex;
     flex-direction: row;
     margin-left: 5px;
 }
 
-.wrapper-pipeline-column {
+.wrapper-draggable-card {
+    margin-top: 10px;
+}
+
+.wrapper-draggable-pipeline-column {
     user-select: none;
     padding: 10px;
     margin: 7px;

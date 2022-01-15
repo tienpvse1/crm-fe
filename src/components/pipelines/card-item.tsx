@@ -16,7 +16,7 @@ export const PipelineCardItem = ({ dataCardPipeline }: PipelineCardItemProps) =>
           width: '100%',
           height: 160,
           borderRadius: 5,
-          marginTop: 10,
+          // marginTop: 2,
           boxShadow: '0px 0px 9px 0px rgba(0, 0, 0, 0.1)'
         }}
       >

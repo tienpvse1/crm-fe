@@ -9,7 +9,7 @@ interface PipelineItemsProps {
 export const PipelineItems = ({ pipeline, providedColumn }: PipelineItemsProps) => {
   return (
     <>
-      <Droppable droppableId={pipeline.id} type="task">
+      <Droppable droppableId={pipeline.name} type="task">
         {(provided) => (
           <div
             className="pipeline-column"
@@ -18,13 +18,14 @@ export const PipelineItems = ({ pipeline, providedColumn }: PipelineItemsProps) 
           >
             <div className="pipeline-column-header" >
               <h1 {...providedColumn.dragHandleProps}>
-                {pipeline.id.toUpperCase()}
+                {pipeline.name.toUpperCase()}
               </h1>
             </div>
-            {pipeline.dataCard.map((data: any, index: number) =>
+            {pipeline.pipelineItems.map((data: any, index: number) =>
               <Draggable key={data.id} draggableId={data.id} index={index}>
                 {(provided) => (
                   <div
+                    className='wrapper-draggable-card'
                     ref={provided.innerRef}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}

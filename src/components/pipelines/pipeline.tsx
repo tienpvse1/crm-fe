@@ -3,86 +3,99 @@ import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd'
 import { PipeLineColumn } from './column';
 
 export const Pipeline = () => {
-
-  const pipeLinesData = [
+  const pipeLineDataApi = [
     {
-      id: 'todo',
-      dataCard: [
+      name: "string",
+      account: {},
+      pipelineColumns: [
         {
-          id: 't1',
-          title: '',
-          description: ''
+          name: "todo",
+          pipeline: "string",
+          pipelineItems: [
+            {
+              id: "t1",
+              name: "my todo 1",
+              pipelineColumn: "string"
+            },
+            {
+              id: "t2",
+              name: "my todo 2",
+              pipelineColumn: "string"
+            },
+            {
+              id: "t3",
+              name: "my todo 3",
+              pipelineColumn: "string"
+            },
+            {
+              id: "t4",
+              name: "my todo 4",
+              pipelineColumn: "string"
+            }
+          ]
         },
         {
-          id: 't2',
-          title: '',
-          description: ''
+          name: "inProgress",
+          pipeline: "string",
+          pipelineItems: [
+            {
+              id: "i1",
+              name: "my progress 1",
+              pipelineColumn: "string"
+            },
+            {
+              id: "i2",
+              name: "my progress 2",
+              pipelineColumn: "string"
+            },
+            {
+              id: "i3",
+              name: "my progress 3",
+              pipelineColumn: "string"
+            }
+          ]
         },
         {
-          id: 't3',
-          title: '',
-          description: ''
+          name: "report",
+          pipeline: "string",
+          pipelineItems: [
+            {
+              id: "r1",
+              name: "my report 1",
+              pipelineColumn: "string"
+            }
+          ]
+        },
+        {
+          name: "done",
+          pipeline: "string",
+          pipelineItems: [
+            {
+              id: "d1",
+              name: "done 1",
+              pipelineColumn: "string"
+            }
+          ]
+        },
+        {
+          name: "done2",
+          pipeline: "string",
+          pipelineItems: [
+            {
+              id: "d2",
+              name: "done 1",
+              pipelineColumn: "string"
+            }
+          ]
         }
       ]
-    },
-    {
-      id: 'inProgress',
-      dataCard: [
-        {
-          id: 'i1',
-          title: '',
-          description: ''
-        },
-        {
-          id: 'i2',
-          title: '',
-          description: ''
-        }
-      ]
-    },
-    {
-      id: 'report',
-      dataCard: []
-    },
-    {
-      id: 'done',
-      dataCard: []
-    }, {
-      id: 'done2',
-      dataCard: []
     }
   ]
 
-  // const pipeLineDataApi = [
-  //   {
-  //     name: "string",
-  //     account: {},
-  //     pipelineColumns: [
-  //       {
-  //         name: "todo",
-  //         pipeline: "string",
-  //         pipelineItems: [
-  //           {
-  //             name: "string",
-  //             pipelineColumn: "string"
-  //           }
-  //         ]
-  //       },
-  //       {
-  //         name: "inProgress",
-  //         pipeline: "string",
-  //         pipelineItems: [
-  //           {
-  //             name: "string",
-  //             pipelineColumn: "string"
-  //           }
-  //         ]
-  //       }
-  //     ]
-  //   }
-  // ]
+  const totalColumn = pipeLineDataApi[0].pipelineColumns.length;
 
-  const [state, setState] = useState(pipeLinesData);
+
+  const [state, setState] = useState(pipeLineDataApi);
 
 
   const onDragEnd = (result: DropResult) => {
@@ -99,45 +112,63 @@ export const Pipeline = () => {
 
 
     //Xử lý cho kéo thả cột
+    //di chuyển đổi chỗ cột
     if (result.type == 'column') {
-      const items = Array.from(state);
-      //lấy ra dữ liệu và vị trí card đang được nắm kéo
+      const items = Array.from(state[0].pipelineColumns);
+      // //lấy ra dữ liệu và vị trí card đang được nắm kéo
       const [newItemColumn] = items.splice(source.index, 1);
-      //thêm dữ liệu card đang được nắm bỏ vào vị trí điểm đến (destination.index)
+      // //thêm dữ liệu card đang được nắm bỏ vào vị trí điểm đến (destination.index)
       items.splice(destination.index, 0, newItemColumn);
-      setState(items);
-      console.log('column:', result);
+
+      const newState = [
+        {
+          ...state[0],
+          pipelineColumns: items
+        }
+      ]
+
+      setState(newState);
+      console.log('column:', newState);
     }
 
     //Xử lý cho kéo thả item
     if (result.type == 'task') {
-      // const start = result.source.index;
-      // const finish = result.destination?.index;
-      // if (start === finish) {
+      const start = result.source.droppableId;
+      const finish = result.destination?.droppableId;
 
-      // }
-      // const column = state
+      //di chuyển các item trong 1 cột
+      if (start === finish) {
+        //find
+        const column = state[0].pipelineColumns.find(value =>
+          value.name == result.source.droppableId)
 
-      // const items = Array.from(state[0].dataCard);
+        const items = Array.from(column!.pipelineItems);
+        // // //lấy ra dữ liệu và vị trí card đang được nắm kéo
+        const [newItemColumn] = items.splice(source.index, 1);
+        // // //thêm dữ liệu card đang được nắm bỏ vào vị trí điểm đến (destination.index)
+        items.splice(destination.index, 0, newItemColumn);
 
-      // const [newItem] = items.splice(source.index, 1);
+        const newColumn = state[0].pipelineColumns.map((item) => {
+          if (item.name == result.source.droppableId) {
+            return { ...item, pipelineItems: items };
+          } else {
+            return item;
+          }
+        })
 
-      // items.splice(destination.index, 0, newItem);
+        const newState = [
+          {
+            ...state[0],
+            pipelineColumns: newColumn
+          }
+        ]
 
-      // const newColumn = [
-      //   {
+        setState(newState);
+      }
 
-      //   }
-      // ]
+      //di chuyển các item qua lại nhiều cột
 
-      // const newstate = [
-      //   ...state,
 
-      // ]
-
-      // setState(items);
-      // console.log('test:', state['todo']);
-      
       console.log('task:', result);
     }
 
@@ -155,13 +186,14 @@ export const Pipeline = () => {
         {(providedColumns) => (
           <div className='scroll-menu'>
             <div
-              className='droppable-wrapper-columns'
+              className='wrapper-droppable-columns'
+              style={{ width: `${ 335 * totalColumn}px` }}
               {...providedColumns.droppableProps}
               ref={providedColumns.innerRef}
             >
 
-              {state.map((pipeline, index) =>
-                <PipeLineColumn index={index} key={pipeline.id} pipeline={pipeline} />)
+              {state[0].pipelineColumns.map((pipeline, index) =>
+                <PipeLineColumn index={index} key={pipeline.name} pipeline={pipeline} />)
               }
 
               {providedColumns.placeholder}
