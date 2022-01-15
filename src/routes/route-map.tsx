@@ -1,5 +1,6 @@
 import { PipelineWrapper } from '@components/pipelines/wrapper';
 import { Contact } from '@pages/contact';
+import { EmailCompose } from '@pages/email-compose';
 import { RouteObject } from 'react-router-dom';
 import { LayoutApp } from '../common/layout';
 import { HomePage } from '../pages/home';
@@ -30,7 +31,11 @@ export const route: RouteObject[] = [
       {
         path: 'pipeline',
         element: <PipelineWrapper />
-      }
+      },
+      {
+        path: 'email',
+        element: <EmailCompose />,
+      },
     ],
   },
 ];

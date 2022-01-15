@@ -11,6 +11,7 @@ import {
   CodeSandboxOutlined,
 } from '@ant-design/icons';
 import { LogoSider } from './logo-sider';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface Menu1Props {
   onCollapse: () => void;
@@ -19,16 +20,22 @@ interface Menu1Props {
 }
 
 export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
+  const location = useLocation();
+  const navigate = useNavigate();
   return (
     <>
-
       <LogoSider onCollapse={onCollapse} collapsed={collapsed} />
       <Menu
         defaultOpenKeys={['sub1']}
-        defaultSelectedKeys={['home']}
+        // @ts-ignore
+        selectedKeys={location.pathname.split('/')[1]}
         mode='inline'
       >
-        <Menu.Item key='home' style={style} icon={<HomeOutlined style={style} />}>
+        <Menu.Item
+          key='home'
+          style={style}
+          icon={<HomeOutlined style={style} />}
+        >
           Home
         </Menu.Item>
 
@@ -39,7 +46,11 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
         >
           Analytic
         </Menu.Item>
-        <Menu.Item key='product' style={style} icon={<TagsOutlined style={style} />}>
+        <Menu.Item
+          key='product'
+          style={style}
+          icon={<TagsOutlined style={style} />}
+        >
           Product
         </Menu.Item>
         <Menu.Item
@@ -89,47 +100,71 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
           icon={<CodeSandboxOutlined style={style} />}
         >
           <Menu.Item
-            icon={<img
-              src={'/slack.png'}
-              height={20}
-              width={20}
-              style={{
-                marginRight: 10,
-              }}
-            />}
+            icon={
+              <img
+                src={'/slack.png'}
+                height={20}
+                width={20}
+                style={{
+                  marginRight: 10,
+                }}
+              />
+            }
             key='slack'
-            style={style}>
+            style={style}
+          >
             {' '}
             Slack
           </Menu.Item>
 
           <Menu.Item
-            icon={<img
-              src={'/notion.png'}
-              height={20}
-              width={20}
-              style={{
-                marginRight: 10,
-              }}
-            />}
+            icon={
+              <img
+                src={'/notion.png'}
+                height={20}
+                width={20}
+                style={{
+                  marginRight: 10,
+                }}
+              />
+            }
             key='notion'
-            style={style}>
-
+            style={style}
+          >
             Notion
           </Menu.Item>
           <Menu.Item
-            icon={<img
-              src={'/google-drive.png'}
-              height={20}
-              width={20}
-              style={{
-                marginRight: 10,
-              }}
-            />}
+            icon={
+              <img
+                src={'/google-drive.png'}
+                height={20}
+                width={20}
+                style={{
+                  marginRight: 10,
+                }}
+              />
+            }
             key='googleDrive'
-            style={style}>
-
+            style={style}
+          >
             Google drive
+          </Menu.Item>
+          <Menu.Item
+            icon={
+              <img
+                src={'https://cdn-icons-png.flaticon.com/512/732/732200.png'}
+                height={20}
+                width={20}
+                style={{
+                  marginRight: 10,
+                }}
+              />
+            }
+            onClick={() => navigate('/email')}
+            key='email'
+            style={style}
+          >
+            Gmail
           </Menu.Item>
           <Menu.Item
             key='add'
@@ -148,5 +183,5 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
         </Menu.SubMenu>
       </Menu>
     </>
-  )
-}
+  );
+};
