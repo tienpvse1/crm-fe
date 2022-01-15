@@ -7,7 +7,7 @@ export const PipelineItem = () => {
       <Card
         style={{
           width: '100%',
-          height: 155,
+          height: 160,
           borderRadius: 5,
           marginTop: 10,
           boxShadow: '0px 0px 9px 0px rgba(0, 0, 0, 0.1)'
@@ -21,8 +21,10 @@ export const PipelineItem = () => {
             </>
           }
           description={
-            <div>
-              <h2 style={{ fontSize: 18 }}>UX - User Flow</h2>
+            <>
+              <div style={{ fontSize: 16 }}>
+                UX - User Flow
+              </div>
               <Divider style={{ marginBottom: 6, borderTop: '1px solid #D4D4D8' }} />
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
@@ -37,7 +39,7 @@ export const PipelineItem = () => {
                   <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
                 </Avatar.Group>
               </div>
-            </div>
+            </>
           }
         />
       </Card>

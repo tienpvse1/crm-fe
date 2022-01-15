@@ -16,10 +16,7 @@ export const HomePage = () => {
       <Button onClick={handleLogin} type='default'>
         Login
       </Button>
-
       <DashBoard />
-      {/* <PipelineItem /> */}
-      {/* <PipelineWrapper /> */}
     </>
   );
 };

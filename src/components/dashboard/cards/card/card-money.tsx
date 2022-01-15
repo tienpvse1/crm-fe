@@ -12,7 +12,7 @@ export const CardMoney = () => {
                     <span className='featureRate'>+$8,700
                     </span>
                 </Col>
-                <Col span={8} className='feature-cover'>
+                <Col span={8}>
                     <DollarCircleTwoTone className='featureIcon' />
                 </Col>
             </Row>
