@@ -1,4 +1,4 @@
-import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd'
+import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
 import { PipeLineColumn } from './column';
 export const PipelineWrapper = () => {
 
@@ -73,7 +73,6 @@ export const PipelineWrapper = () => {
     // items.splice(destination.index, 0, newOrder);
 
     // setTodo(items);
-    console.log(result);
 
   }
 

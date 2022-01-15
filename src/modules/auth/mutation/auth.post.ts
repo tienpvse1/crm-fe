@@ -5,8 +5,8 @@ import { setToken } from '../../../cookies';
 const { AUTH } = controllers;
 export const authenticateUser = async () => {
   const { data } = await instance.post(AUTH, {
-    email: 'chuongtest@gmail.com',
-    password: '0123456789',
+    email: 'tienpvse1@gmail.com',
+    password: 'tienpvse1@gmail.com',
   });
   setToken(data.data);
   return data;
