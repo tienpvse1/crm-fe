@@ -1,3 +1,4 @@
+import { PipelineWrapper } from '@components/pipelines/wrapper';
 import { Contact } from '@pages/contact';
 import { EmailCompose } from '@pages/email-compose';
 import { RouteObject } from 'react-router-dom';
@@ -15,6 +16,7 @@ export const route: RouteObject[] = [
     path: '/signup',
     element: <SignUpPage />,
   },
+
   {
     path: '/',
     element: <LayoutApp />,
@@ -28,9 +30,17 @@ export const route: RouteObject[] = [
         element: <Contact />,
       },
       {
+        path: 'pipeline',
+        element: <PipelineWrapper />,
+      },
+      {
         path: 'email',
         element: <EmailCompose />,
       },
     ],
+  },
+  {
+    path: '/*',
+    element: <h1>Page not found</h1>,
   },
 ];
