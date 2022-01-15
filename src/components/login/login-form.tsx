@@ -1,12 +1,13 @@
 import { TOKEN } from '@constance/cookie';
 import { setCookie } from '@cookies';
 import { IAuthDto } from '@modules/auth/dto/auth.dto';
-import { useAuthenticateUser } from '@modules/auth/mutation/auth.post';
+import { authenticateUser } from '@modules/auth/mutation/auth.post';
 import { Button, Checkbox, Form, Input } from 'antd';
+import { useMutation } from 'react-query';
 import { Navigate } from 'react-router-dom';
 import { Modal } from './modal';
 export const LoginForm = () => {
-  const { mutate, error, data, reset } = useAuthenticateUser();
+  const { mutate, error, data, reset } = useMutation(authenticateUser, {});
   const handleLogin = async (authDto: IAuthDto) => {
     mutate(authDto);
   };

@@ -6,7 +6,7 @@ import {
 } from '@modules/email-temlate/query/email-template.get';
 import { postEmail } from '@modules/email/mutate/email.post';
 import { Button, Input } from 'antd';
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import EmailEditor from 'react-email-editor';
 
 export const EmailCompose: React.FC = ({}) => {
