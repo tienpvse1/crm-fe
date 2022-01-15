@@ -9,9 +9,7 @@ import { Button, Input } from 'antd';
 import React, { useRef, useState } from 'react';
 import EmailEditor from 'react-email-editor';
 
-
 export const EmailCompose: React.FC = ({}) => {
-
   // necessary state
   const emailEditorRef = useRef<EmailEditor>(null);
   const [templates, setTemplates] = useState();
@@ -21,7 +19,7 @@ export const EmailCompose: React.FC = ({}) => {
   const [isModelOpen, setIsModelOpen] = useState(false);
 
   // this function will handle when use hit send button
-  // every content will be convert to html and send via gmail 
+  // every content will be convert to html and send via gmail
   const exportHTML = () => {
     if (emailEditorRef.current) {
       emailEditorRef.current.exportHtml((design) => {
@@ -48,7 +46,7 @@ export const EmailCompose: React.FC = ({}) => {
   // load all saved template from database and apply to the model
   const handleLoad = async (id: string) => {
     if (!emailEditorRef.current) return;
-    const data = await getTemplateById('H3wK6U7TB6');
+    const data = await getTemplateById(id);
     emailEditorRef.current.loadDesign(data.data.design);
   };
 
@@ -56,6 +54,11 @@ export const EmailCompose: React.FC = ({}) => {
   // its template from database will be apply to the database
   const loadTemplates = async () => {
     const data = await findAllTemplates();
+    console.log(
+      '🚀 ~ file: email-compose.tsx ~ line 59 ~ loadTemplates ~ data',
+      data
+    );
+
     setTemplates(data.data);
     setIsModelOpen(true);
   };

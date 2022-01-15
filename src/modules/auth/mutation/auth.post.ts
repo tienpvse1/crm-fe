@@ -1,13 +1,17 @@
+import { useMutation } from 'react-query';
 import { instance } from '../../../axios';
 import { controllers } from '../../../constance/controllers';
 import { setToken } from '../../../cookies';
+import { IAuthDto } from '../dto/auth.dto';
+import { IAuth } from '../entity/auth.entity';
 
 const { AUTH } = controllers;
-export const authenticateUser = async () => {
+export const authenticateUser = async (authDto: IAuthDto) => {
   const { data } = await instance.post(AUTH, {
-    email: 'tienpvse1@gmail.com',
-    password: 'tienpvse1@gmail.com',
+    ...authDto,
   });
   setToken(data.data);
-  return data;
+  return data as IAuth;
 };
+
+export const useAuthenticateUser = () => useMutation(authenticateUser, {});
