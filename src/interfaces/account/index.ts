@@ -1,4 +1,5 @@
 import { IPipeline } from "@interfaces/pipeline";
+import { Role } from "@interfaces/types";
 
 export interface IAccount {
   firstName: string;
@@ -7,8 +8,8 @@ export interface IAccount {
   email: string;
   password: string;
   isSocialAccount: boolean;
-  //t chưa xác định được interface của Role và emailTemplates nên để tạm null thông cảm
-  role: null;
+  role: Role;
+  //chưa xác định được interface của emailTemplates nên để tạm null thông cảm
   emailTemplates: null;
   //
   pipeline: IPipeline;
