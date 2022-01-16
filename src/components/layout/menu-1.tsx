@@ -28,7 +28,11 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
       <Menu
         defaultOpenKeys={['sub1']}
         // @ts-ignore
-        selectedKeys={location.pathname.split('/')[1]}
+        selectedKeys={
+          location.pathname.split('/')[1].length > 0
+            ? location.pathname.split('/')[1]
+            : 'home'
+        }
         mode='inline'
       >
         <Menu.Item
