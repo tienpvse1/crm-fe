@@ -5,7 +5,7 @@ import {
   getTemplateById,
 } from '@modules/email-temlate/query/email-template.get';
 import { useSendEmail } from '@modules/email/mutate/email.post';
-import { Button, Input } from 'antd';
+import { Button, Input, Modal } from 'antd';
 import { useRef, useState } from 'react';
 import EmailEditor from 'react-email-editor';
 import { openNotification } from '@util/notification';
@@ -17,7 +17,7 @@ export const EmailCompose: React.FC = ({}) => {
   const [to, setTo] = useState('');
   const [subject, setSubject] = useState('');
   const [isModelOpen, setIsModelOpen] = useState(false);
-
+  const [modal, contextHolder] = Modal.useModal();
   const { mutate, isLoading } = useSendEmail();
 
   // this function will handle when use hit send button
@@ -82,6 +82,7 @@ export const EmailCompose: React.FC = ({}) => {
       <Input
         placeholder='Email subject'
         onChange={(e) => setSubject(e.target.value)}
+        type='email'
       />
 
       <EmailEditor
@@ -95,15 +96,49 @@ export const EmailCompose: React.FC = ({}) => {
           theme: 'dark',
         }}
       />
-      <Button onClick={saveTemplate} type='primary' danger>
+      <Button
+        onClick={saveTemplate}
+        style={{
+          marginRight: 12,
+        }}
+        type='primary'
+        danger
+      >
         Save
       </Button>
-      <Button onClick={loadTemplates} type='primary' danger>
+      <Button
+        onClick={loadTemplates}
+        style={{
+          marginRight: 12,
+        }}
+        type='primary'
+        danger
+      >
         Load
       </Button>
-      <Button onClick={exportHTML} type='primary' danger loading={isLoading}>
+      <Button
+        style={{
+          marginRight: 12,
+        }}
+        onClick={() => {
+          modal.warning({
+            title: 'Warning',
+            okText: 'Agree',
+            cancelText: 'Abort',
+            closable: true,
+            content: <p>This is mail will be sent to {to}</p>,
+            onOk: exportHTML,
+            onCancel: () => console.log('canceled'),
+          });
+        }}
+        type='primary'
+        danger
+        disabled={to.length > 0}
+        loading={isLoading}
+      >
         Send
       </Button>
+      {contextHolder}
     </>
   );
 };
