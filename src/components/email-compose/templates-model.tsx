@@ -1,37 +1,54 @@
 import { IEmailTemplate } from '@modules/email-temlate/entity/email-template.entity';
+import { openNotification } from '@util/notification';
 import { Modal } from 'antd';
 import { Dispatch, SetStateAction } from 'react';
+import { Design } from 'react-email-editor';
+import { TemplateSelection } from './templates-selection';
 
 interface ITemplateModel {
-  visible: boolean;
+  modal: string;
   templates: IEmailTemplate[];
   handleLoad: (id: string) => void;
-  setIsModelOpen: Dispatch<SetStateAction<boolean>>;
+  setModal: Dispatch<SetStateAction<string>>;
+  design: Design;
 }
 
-export const TemplatesModel: React.FC<ITemplateModel> = ({
-  visible,
+export const MyModal: React.FC<ITemplateModel> = ({
+  modal,
   templates,
   handleLoad,
-  setIsModelOpen,
+  setModal,
+  design,
 }) => {
+  const handleClose = () => {
+    setModal('');
+    openNotification('success', 'Your email have updated successfully');
+  };
   return (
     <div>
       <Modal
         title='Your templates...'
-        visible={visible}
-        onCancel={() => setIsModelOpen(false)}
+        visible={modal === 'selectTemplate'}
+        onCancel={() => setModal('false')}
       >
         {templates.map((template) => (
           <p
             style={{ cursor: 'pointer' }}
+            key={template.id}
             onClick={() => {
-              handleLoad(template.id), setIsModelOpen(false);
+              handleLoad(template?.id || ''), setModal('false');
             }}
           >
             {template.name}
           </p>
         ))}
+      </Modal>
+      <Modal
+        title='Save your template'
+        visible={modal === 'saveTemplate'}
+        onCancel={() => setModal('false')}
+      >
+        <TemplateSelection design={design} onClose={handleClose} />
       </Modal>
     </div>
   );
