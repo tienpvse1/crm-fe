@@ -5,7 +5,8 @@ import GoogleButton from 'react-google-button';
 import { controllers } from '../constance/controllers';
 import { envVars } from '../env/var.env';
 import { LottieBackGround } from '../components/background';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import lottieFile from '../animation/background.json';
 
 export const LoginPage = () => {
   const { AUTH } = controllers;
@@ -13,14 +14,13 @@ export const LoginPage = () => {
     window.location.href = `${envVars.VITE_BE_BASE_URL}${AUTH}/google`;
   };
 
-
   return (
     <div className='wrapper-background'>
-      <LottieBackGround />
+      <LottieBackGround data={lottieFile} />
       <motion.div
         initial={{ y: '-100vw' }}
         animate={{ y: 1 }}
-        transition={{ delay: 0.1 ,type: 'spring', stiffness: 45 }}
+        transition={{ delay: 0.1, type: 'spring', stiffness: 45 }}
         className='wrapper-login-form'
       >
         <div className='header-form'>
@@ -46,6 +46,6 @@ export const LoginPage = () => {
         </div>
         <a href=''>Chính sách bảo mật</a>
       </motion.div>
-    </div >
+    </div>
   );
 };

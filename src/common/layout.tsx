@@ -1,5 +1,7 @@
+import { TOKEN } from '@constance/cookie';
+import { getCookies } from '@cookies';
 import { LayoutProps, Layout } from 'antd';
-import { Outlet } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import { MenuNavigator } from '../components/layout/main-menu';
 import { useToggle } from '../hooks/useToggle';
 import { ContentApp } from './app-content';
@@ -7,11 +9,14 @@ import { ContentApp } from './app-content';
 const { Sider } = Layout;
 
 export const LayoutApp: React.FC<LayoutProps> = () => {
-
   const [collapsed, onCollapse] = useToggle();
+  const token = getCookies(TOKEN);
+  if (!token[0]) return <Navigate to={'/login'} />;
+  // @ts-ignore
+  if (!token[0].token) return <Navigate to={'/login'} />;
 
   return (
-    <Layout  style={{ minHeight: '100vh' }}>
+    <Layout style={{ minHeight: '100vh' }}>
       <Sider
         className='layout-sider'
         trigger={null}
@@ -23,10 +28,9 @@ export const LayoutApp: React.FC<LayoutProps> = () => {
         <MenuNavigator onCollapse={onCollapse} collapsed={collapsed} />
       </Sider>
 
-      <ContentApp >
+      <ContentApp>
         <Outlet />
       </ContentApp>
-
     </Layout>
   );
 };

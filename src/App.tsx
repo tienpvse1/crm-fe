@@ -1,17 +1,14 @@
 import { useRoutes } from 'react-router-dom';
 import './stylesheets/App.scss';
 import { route } from './routes/route-map';
+import { QueryClient, QueryClientProvider } from 'react-query';
+export const client = new QueryClient();
 function App() {
   const elements = useRoutes(route);
-  console.log("🚀 ~ file: App.tsx ~ line 6 ~ App ~ elements", elements)
-
-
-
-  
   return (
-    <div className='App'>
-        {elements}
-    </div>
+    <QueryClientProvider client={client}>
+      <div className='App'>{elements}</div>
+    </QueryClientProvider>
   );
 }
 export default App;

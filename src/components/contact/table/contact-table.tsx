@@ -5,13 +5,11 @@ import Column from 'antd/lib/table/Column';
 import { ContactHeader } from '../header/contact-header';
 
 const rowSelection = {
-	onChange: (selectedRowKeys: React.Key[], selectedRows: any[]) => {
-		console.log(`selectedRowKeys: ${selectedRowKeys}` + ' selectedRows: ', selectedRows);
-	},
-	getCheckboxProps: (record: any) => ({
-		disabled: record.name === 'Disabled User',
-		name: record.name,
-	}),
+  onChange: (selectedRowKeys: React.Key[], selectedRows: any[]) => {},
+  getCheckboxProps: (record: any) => ({
+    disabled: record.name === 'Disabled User',
+    name: record.name,
+  }),
 };
 
 export const ContactData = () => {

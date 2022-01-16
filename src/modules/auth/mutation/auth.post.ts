@@ -1,13 +1,14 @@
 import { instance } from '../../../axios';
 import { controllers } from '../../../constance/controllers';
 import { setToken } from '../../../cookies';
+import { IAuthDto } from '../dto/auth.dto';
+import { IAuth } from '../entity/auth.entity';
 
 const { AUTH } = controllers;
-export const authenticateUser = async () => {
+export const authenticateUser = async (authDto: IAuthDto) => {
   const { data } = await instance.post(AUTH, {
-    email: 'chuongtest@gmail.com',
-    password: '0123456789',
+    ...authDto,
   });
   setToken(data.data);
-  return data;
+  return data as IAuth;
 };

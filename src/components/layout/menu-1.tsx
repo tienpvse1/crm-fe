@@ -1,15 +1,16 @@
-import { Menu } from 'antd';
 import {
-  HomeOutlined,
-  SolutionOutlined,
-  StockOutlined,
-  TagsOutlined,
-  WalletOutlined,
-  UserOutlined,
+  BranchesOutlined,
   CalendarOutlined,
-  PlusOutlined,
   CodeSandboxOutlined,
+  ContactsOutlined,
+  HomeOutlined,
+  PlusOutlined,
+  StockOutlined,
+  UserOutlined,
+  WalletOutlined,
 } from '@ant-design/icons';
+import { Menu } from 'antd';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { LogoSider } from './logo-sider';
 
 interface Menu1Props {
@@ -19,35 +20,45 @@ interface Menu1Props {
 }
 
 export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
+  const location = useLocation();
+  const navigate = useNavigate();
   return (
     <>
-
       <LogoSider onCollapse={onCollapse} collapsed={collapsed} />
       <Menu
         defaultOpenKeys={['sub1']}
-        defaultSelectedKeys={['home']}
+        // @ts-ignore
+        selectedKeys={
+          location.pathname.split('/')[1].length > 0
+            ? location.pathname.split('/')[1]
+            : 'home'
+        }
         mode='inline'
       >
-        <Menu.Item key='home' style={style} icon={<HomeOutlined style={style} />}>
+        <Menu.Item
+          key='home'
+          style={style}
+          onClick={() => navigate('/')}
+          icon={<HomeOutlined style={style} />}
+        >
           Home
         </Menu.Item>
 
         <Menu.Item
-          key='analytic'
+          key='contact'
+          onClick={() => navigate('/contact')}
           style={style}
-          icon={<StockOutlined style={style} />}
+          icon={<ContactsOutlined style={style} />}
         >
-          Analytic
-        </Menu.Item>
-        <Menu.Item key='product' style={style} icon={<TagsOutlined style={style} />}>
-          Product
+          Contact
         </Menu.Item>
         <Menu.Item
-          key='order'
+          key='pipeline'
+          onClick={() => navigate('/pipeline')}
           style={style}
-          icon={<SolutionOutlined style={style} />}
+          icon={<BranchesOutlined style={style} />}
         >
-          Order
+          Pipeline
         </Menu.Item>
         <Menu.Item
           key='payment'
@@ -88,65 +99,66 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
           }
           icon={<CodeSandboxOutlined style={style} />}
         >
-          <Menu.Item
-            icon={<img
+          <Menu.Item key='slack' style={style}>
+            <img
               src={'/slack.png'}
               height={20}
               width={20}
               style={{
                 marginRight: 10,
               }}
-            />}
-            key='slack'
-            style={style}>
-            {' '}
+            />
             Slack
           </Menu.Item>
 
-          <Menu.Item
-            icon={<img
+          <Menu.Item key='notion' style={style}>
+            <img
               src={'/notion.png'}
               height={20}
               width={20}
               style={{
                 marginRight: 10,
               }}
-            />}
-            key='notion'
-            style={style}>
-
+            />
             Notion
           </Menu.Item>
-          <Menu.Item
-            icon={<img
+          <Menu.Item key='googleDrive' style={style}>
+            <img
               src={'/google-drive.png'}
               height={20}
               width={20}
               style={{
                 marginRight: 10,
               }}
-            />}
-            key='googleDrive'
-            style={style}>
-
+            />
             Google drive
           </Menu.Item>
           <Menu.Item
-            key='add'
-            icon={
-              <PlusOutlined
-                width={20}
-                style={{
-                  marginRight: 8,
-                }}
-              />
-            }
+            onClick={() => navigate('/email')}
+            key='email'
             style={style}
           >
+            <img
+              src={'https://cdn-icons-png.flaticon.com/512/732/732200.png'}
+              height={20}
+              width={20}
+              style={{
+                marginRight: 10,
+              }}
+            />
+            Gmail
+          </Menu.Item>
+          <Menu.Item key='add' style={style}>
+            <PlusOutlined
+              width={20}
+              style={{
+                marginRight: 8,
+              }}
+            />
             Add plugin
           </Menu.Item>
         </Menu.SubMenu>
       </Menu>
     </>
-  )
-}
+  );
+};
