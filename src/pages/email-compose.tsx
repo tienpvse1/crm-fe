@@ -4,11 +4,11 @@ import {
   findAllTemplates,
   getTemplateById,
 } from '@modules/email-temlate/query/email-template.get';
-import { postEmail } from '@modules/email/mutate/email.post';
+import { useSendEmail } from '@modules/email/mutate/email.post';
 import { Button, Input } from 'antd';
 import { useRef, useState } from 'react';
 import EmailEditor from 'react-email-editor';
-
+import { openNotification } from '@util/notification';
 export const EmailCompose: React.FC = ({}) => {
   // necessary state
   const emailEditorRef = useRef<EmailEditor>(null);
@@ -18,12 +18,14 @@ export const EmailCompose: React.FC = ({}) => {
   const [subject, setSubject] = useState('');
   const [isModelOpen, setIsModelOpen] = useState(false);
 
+  const { mutate, isLoading } = useSendEmail();
+
   // this function will handle when use hit send button
   // every content will be convert to html and send via gmail
   const exportHTML = () => {
     if (emailEditorRef.current) {
       emailEditorRef.current.exportHtml((design) => {
-        postEmail({
+        mutate({
           subject,
           to,
           value: design.html,
@@ -39,18 +41,25 @@ export const EmailCompose: React.FC = ({}) => {
     if (!emailEditorRef.current) return;
     emailEditorRef.current.saveDesign(async (design) => {
       await createTemplate({ design, name });
-      alert('save successfully');
+      openNotification(
+        'Notification',
+        'Your email template have been saved successfully'
+      );
     });
   };
 
-  // load all saved template from database and apply to the model
+  // load all saved template from database and apply to the modal
   const handleLoad = async (id: string) => {
     if (!emailEditorRef.current) return;
     const data = await getTemplateById(id);
     emailEditorRef.current.loadDesign(data.data.design);
+    openNotification(
+      'Notification',
+      'Email template have been loaded successfully'
+    );
   };
 
-  // when user choose an template form model
+  // when user choose an template form modal
   // its template from database will be apply to the database
   const loadTemplates = async () => {
     const data = await findAllTemplates();
@@ -83,37 +92,16 @@ export const EmailCompose: React.FC = ({}) => {
           ],
         }}
         appearance={{
-          theme: 'light',
+          theme: 'dark',
         }}
       />
-      <Button
-        onClick={saveTemplate}
-        type='primary'
-        danger
-        style={{
-          backgroundColor: '',
-        }}
-      >
+      <Button onClick={saveTemplate} type='primary' danger>
         Save
       </Button>
-      <Button
-        onClick={loadTemplates}
-        type='primary'
-        danger
-        style={{
-          backgroundColor: '',
-        }}
-      >
+      <Button onClick={loadTemplates} type='primary' danger>
         Load
       </Button>
-      <Button
-        onClick={exportHTML}
-        type='primary'
-        danger
-        style={{
-          backgroundColor: '',
-        }}
-      >
+      <Button onClick={exportHTML} type='primary' danger loading={isLoading}>
         Send
       </Button>
     </>
