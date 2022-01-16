@@ -1,27 +1,22 @@
-import { Draggable, DraggableProvided, Droppable } from 'react-beautiful-dnd'
+import { IPipelineColumns, IPipelineItem } from '@interfaces/pipeline'
+import { Draggable, Droppable } from 'react-beautiful-dnd'
 import { PipelineCardItem } from './card-item'
 
 interface PipelineItemsProps {
-  pipeline: any;
-  providedColumn: DraggableProvided;
+  pipelineColumn: IPipelineColumns;
 }
 
-export const PipelineItems = ({ pipeline, providedColumn }: PipelineItemsProps) => {
+export const PipelineItems = ({ pipelineColumn }: PipelineItemsProps) => {
   return (
     <>
-      <Droppable droppableId={pipeline.name} type="task">
+      <Droppable droppableId={pipelineColumn.name} type="task">
         {(provided) => (
           <div
             className="pipeline-column"
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
-            <div className="pipeline-column-header" >
-              <h1 {...providedColumn.dragHandleProps}>
-                {pipeline.name.toUpperCase()}
-              </h1>
-            </div>
-            {pipeline.pipelineItems.map((data: any, index: number) =>
+            {pipelineColumn.pipelineItems.map((data: IPipelineItem, index: number) =>
               <Draggable key={data.id} draggableId={data.id} index={index}>
                 {(provided) => (
                   <div

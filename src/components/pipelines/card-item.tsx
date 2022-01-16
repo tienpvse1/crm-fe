@@ -1,14 +1,15 @@
 import { ClockCircleOutlined, FlagOutlined, MessageOutlined } from "@ant-design/icons";
+import { IPipelineItem } from "@interfaces/pipeline";
 import { Avatar, Card, Divider, Tag } from "antd"
 const { Meta } = Card;
 
 interface PipelineCardItemProps {
-  dataCardPipeline: any;
-
+  dataCardPipeline: IPipelineItem;
 }
 
-
 export const PipelineCardItem = ({ dataCardPipeline }: PipelineCardItemProps) => {
+  console.log('changed');
+  
   return (
     <>
       <Card
@@ -16,7 +17,6 @@ export const PipelineCardItem = ({ dataCardPipeline }: PipelineCardItemProps) =>
           width: '100%',
           height: 160,
           borderRadius: 5,
-          // marginTop: 2,
           boxShadow: '0px 0px 9px 0px rgba(0, 0, 0, 0.1)'
         }}
       >
@@ -44,6 +44,8 @@ export const PipelineCardItem = ({ dataCardPipeline }: PipelineCardItemProps) =>
                 </div>
                 <Avatar.Group maxCount={2} maxStyle={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>
                   <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
+                  <Avatar style={{ backgroundColor: '#BBDEFB' }}>I</Avatar>
+                  <Avatar style={{ backgroundColor: '#f56a00' }}>C</Avatar>
                 </Avatar.Group>
               </div>
             </>

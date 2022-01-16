@@ -1,21 +1,27 @@
+import { IPipelineColumns } from "@interfaces/pipeline"
 import { Draggable } from "react-beautiful-dnd"
 import { PipelineItems } from "./items"
 
 interface PipeLineColumnProps {
-  pipeline: any,
+  pipelineColumn: IPipelineColumns,
   index: number;
 }
 
-export const PipeLineColumn = ({ pipeline, index }: PipeLineColumnProps) => {
+export const PipeLineColumn = ({ pipelineColumn, index }: PipeLineColumnProps) => {
   return (
-    <Draggable draggableId={pipeline.name} index={index}>
+    <Draggable draggableId={pipelineColumn.name} index={index}>
       {(providedColumn) => (
         <div
           className="wrapper-draggable-pipeline-column"
           ref={providedColumn.innerRef}
           {...providedColumn.draggableProps}
         >
-          <PipelineItems pipeline={pipeline} providedColumn={providedColumn} />
+          <div className="pipeline-column-header" >
+            <h1 {...providedColumn.dragHandleProps}>
+              {pipelineColumn.name.toUpperCase()}
+            </h1>
+          </div>
+          <PipelineItems pipelineColumn={pipelineColumn} />
         </div>
 
       )}
