@@ -11,4 +11,7 @@ export const postEmail = async (email: CreateEmailDto) => {
   return data;
 };
 
-export const useSendEmail = () => useMutation(postEmail);
+export const useSendEmail = (callback: () => void) =>
+  useMutation(postEmail, {
+    onError: () => callback(),
+  });
