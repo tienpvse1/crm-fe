@@ -1,5 +1,4 @@
 import { Modal as Dialog } from 'antd';
-import React from 'react';
 interface ModalProps {
   reset: () => void;
 }

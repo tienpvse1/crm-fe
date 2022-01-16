@@ -1,4 +1,3 @@
-import { useMutation } from 'react-query';
 import { instance } from '../../../axios';
 import { controllers } from '../../../constance/controllers';
 import { setToken } from '../../../cookies';
@@ -13,5 +12,3 @@ export const authenticateUser = async (authDto: IAuthDto) => {
   setToken(data.data);
   return data as IAuth;
 };
-
-export const useAuthenticateUser = () => useMutation(authenticateUser, {});

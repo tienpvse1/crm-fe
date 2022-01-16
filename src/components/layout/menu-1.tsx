@@ -28,7 +28,11 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
       <Menu
         defaultOpenKeys={['sub1']}
         // @ts-ignore
-        selectedKeys={location.pathname.split('/')[1]}
+        selectedKeys={
+          location.pathname.split('/')[1].length > 0
+            ? location.pathname.split('/')[1]
+            : 'home'
+        }
         mode='inline'
       >
         <Menu.Item
@@ -95,85 +99,62 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
           }
           icon={<CodeSandboxOutlined style={style} />}
         >
-          <Menu.Item
-            icon={
-              <img
-                src={'/slack.png'}
-                height={20}
-                width={20}
-                style={{
-                  marginRight: 10,
-                }}
-              />
-            }
-            key='slack'
-            style={style}
-          >
-            {' '}
+          <Menu.Item key='slack' style={style}>
+            <img
+              src={'/slack.png'}
+              height={20}
+              width={20}
+              style={{
+                marginRight: 10,
+              }}
+            />
             Slack
           </Menu.Item>
 
-          <Menu.Item
-            icon={
-              <img
-                src={'/notion.png'}
-                height={20}
-                width={20}
-                style={{
-                  marginRight: 10,
-                }}
-              />
-            }
-            key='notion'
-            style={style}
-          >
+          <Menu.Item key='notion' style={style}>
+            <img
+              src={'/notion.png'}
+              height={20}
+              width={20}
+              style={{
+                marginRight: 10,
+              }}
+            />
             Notion
           </Menu.Item>
-          <Menu.Item
-            icon={
-              <img
-                src={'/google-drive.png'}
-                height={20}
-                width={20}
-                style={{
-                  marginRight: 10,
-                }}
-              />
-            }
-            key='googleDrive'
-            style={style}
-          >
+          <Menu.Item key='googleDrive' style={style}>
+            <img
+              src={'/google-drive.png'}
+              height={20}
+              width={20}
+              style={{
+                marginRight: 10,
+              }}
+            />
             Google drive
           </Menu.Item>
           <Menu.Item
-            icon={
-              <img
-                src={'https://cdn-icons-png.flaticon.com/512/732/732200.png'}
-                height={20}
-                width={20}
-                style={{
-                  marginRight: 10,
-                }}
-              />
-            }
             onClick={() => navigate('/email')}
             key='email'
             style={style}
           >
+            <img
+              src={'https://cdn-icons-png.flaticon.com/512/732/732200.png'}
+              height={20}
+              width={20}
+              style={{
+                marginRight: 10,
+              }}
+            />
             Gmail
           </Menu.Item>
-          <Menu.Item
-            key='add'
-            icon={
-              <PlusOutlined
-                width={20}
-                style={{
-                  marginRight: 8,
-                }}
-              />
-            }
-            style={style}
-          >
+          <Menu.Item key='add' style={style}>
+            <PlusOutlined
+              width={20}
+              style={{
+                marginRight: 8,
+              }}
+            />
             Add plugin
           </Menu.Item>
         </Menu.SubMenu>
