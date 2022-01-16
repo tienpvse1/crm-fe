@@ -1,5 +1,6 @@
 import { Axios } from '@axios';
 import { controllers } from '@constance/controllers';
+import { useMutation } from 'react-query';
 import { CreateEmailDto } from '../dto/create-email.dto';
 const { MAILER } = controllers;
 export const postEmail = async (email: CreateEmailDto) => {
@@ -9,3 +10,5 @@ export const postEmail = async (email: CreateEmailDto) => {
   });
   return data;
 };
+
+export const useSendEmail = () => useMutation(postEmail);
