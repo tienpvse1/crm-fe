@@ -17,4 +17,4 @@ jobs:
       - name: building the optimistic build
         run: npm run build
       - name: start the server
-        run: pm2 serve dist 80 --spa
+        run: pm2 serve dist 80 --spa 
