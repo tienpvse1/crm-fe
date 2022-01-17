@@ -23,6 +23,8 @@ export const LineChart = () => {
                 duration: 3000,
             },
         },
+        color: ['#5E35B1', '#FFEE58', '#795548', '#212121', '#DD2C00']
+
     };
     return (
         <div className="line-chart">

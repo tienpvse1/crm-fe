@@ -1,4 +1,4 @@
-import { DollarCircleTwoTone, MoreOutlined } from '@ant-design/icons'
+import { DollarOutlined, MoreOutlined } from '@ant-design/icons'
 import { Card, Col, Row } from 'antd'
 
 export const CardMoney = () => {
@@ -13,7 +13,7 @@ export const CardMoney = () => {
                     </span>
                 </Col>
                 <Col span={8}>
-                    <DollarCircleTwoTone className='featureIcon' />
+                    <DollarOutlined className='featureIcon' />
                 </Col>
             </Row>
             <span className='featureSub'>Since last week</span>

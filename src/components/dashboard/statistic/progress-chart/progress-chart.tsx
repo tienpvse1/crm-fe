@@ -1,12 +1,11 @@
 import { Tooltip, Progress, Row, Col } from 'antd';
-import 'antd/dist/antd.css';
 
 export const ProgressChart = () => {
     const MONEY = 14850;
     return (
         <div className='progress-chart'>
-            <Tooltip className='chart' color={'#3c76f1'} title=" Bank Transfer /  Credit Card">
-                <Progress percent={60} strokeWidth={8} trailColor='#d8e4fc' format={(percent?: number) =>
+            <Tooltip className='chart' title=" Bank Transfer /  Credit Card">
+                <Progress percent={60} strokeWidth={8} format={(percent?: number) =>
                     <>
                         <span className='moneyInfo'>${MONEY}</span>
                         <span className='moneySub'>Month Sales</span>

@@ -1,8 +1,9 @@
+@import '../base/color';
 .site-layout-background {
     min-height: 360px;
     padding: 5px;
 }
 
 .site-layout {
-    background-color: white !important;
+    background-color: $light-background-color !important;
 }

@@ -18,7 +18,7 @@ export const ContactHeader = () => {
                         <ButtonFilter />
                     </Col>
                     <Col xs={1} sm={2} md={4} lg={4} xl={2} style={{ textAlign: 'center', marginTop: '20px' }}>
-                        <Button type="primary" size="middle" danger>
+                        <Button type="primary" size="middle">
                             <PlusOutlined /> Create New Contact
                         </Button>
                     </Col>
