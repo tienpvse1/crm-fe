@@ -9,12 +9,13 @@ interface LogoSiderProps {
 export const LogoSider = ({ collapsed, onCollapse }: LogoSiderProps) => {
   return (
     <div className='logo-sider'>
-      <MenuOutlined
-        onClick={onCollapse}
-        style={{
-          fontSize: 20,
-        }}
-      />
+      <div className='icon-menu-outlined-sider' onClick={onCollapse}>
+        <MenuOutlined
+          style={{
+            fontSize: 20,
+          }}
+        />
+      </div>
       {!collapsed && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -22,15 +23,10 @@ export const LogoSider = ({ collapsed, onCollapse }: LogoSiderProps) => {
           transition={{ delay: 0.2 }}
         >
           <img
-            src='/crm.png'
-            height={40}
-            width={40}
-            style={{
-              marginLeft: 20,
-              marginRight: '10px',
-            }}
-          />{' '}
-          VJAA
+            src='/vjaa-logo.svg'
+            width={'100%'}
+            height={'100%'}
+          />
         </motion.div>
       )}
     </div>

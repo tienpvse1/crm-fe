@@ -1,5 +1,5 @@
 import { BellOutlined } from '@ant-design/icons';
-import { Badge, Dropdown } from 'antd';
+import { Dropdown } from 'antd';
 import { DropdownContent } from './dropdown/dropdown-notify';
 
 export const DropdownNotify = () => {
@@ -10,9 +10,7 @@ export const DropdownNotify = () => {
       placement='bottomRight'
       destroyPopupOnHide
     >
-      <Badge count={5}>
-        <BellOutlined style={{ fontSize: '20px', color: 'rgba(0,0,0,0.8)' }} />
-      </Badge>
+      <BellOutlined style={{ fontSize: '20px', color: 'rgba(0,0,0,0.8)' }} />
     </Dropdown>
   );
 };

@@ -1,28 +1,25 @@
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import { Menu, Space } from 'antd';
+import { Badge, Menu, Space } from 'antd';
 import { DropdownNotify } from './menu-notify';
 import { DropdownProfile } from './menu-profile';
-const state = {
-  current: 'mail',
-};
+
 export const MenuHeader = () => {
-  const { current } = state;
   return (
     <Space size='small'>
-      <Menu selectedKeys={[current]} mode='horizontal'>
-        <Menu.Item
-          key='question'
-        >
+      <Menu style={{ height: '60px', border: 'none' }} mode='horizontal'>
+        <Menu.Item key='question'>
           <QuestionCircleOutlined
             style={{ fontSize: '20px', color: 'rgba(0,0,0,0.8)' }}
           />
         </Menu.Item>
 
         <Menu.Item key='message'>
-          <DropdownNotify />
+          <Badge count={5}>
+            <DropdownNotify />
+          </Badge>
         </Menu.Item>
 
-        <Menu.Item key='profile'>
+        <Menu.Item className='title-dropdown-profile' key='profile'>
           <DropdownProfile />
         </Menu.Item>
       </Menu>

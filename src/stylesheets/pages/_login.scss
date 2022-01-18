@@ -1,3 +1,4 @@
+@import "../base/variables";
 .wrapper-background {
     font-family: 'Roboto', sans-serif;
     background-image: url(/wave-haikei9.svg);
@@ -55,12 +56,6 @@
     font-size: 16px !important;
     font-weight: 400;
     height: 35px !important;
-    background-color: #0047ab !important;
-    border-color: #0047ab !important;
-    &:hover {
-        background-color: #0073cf !important;
-        border-color: #0073cf !important;
-    }
 }
 
 .content-login-form {
@@ -82,7 +77,6 @@
         width: 10% !important;
         min-width: 15%;
     }
-    padding-top: -15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,10 +94,10 @@
 }
 
 .wrapper-background a {
-    color: #0047ab !important;
+    color: $primary-dark-color !important;
     font-weight: 600;
     &:hover {
-        color: #0073cf !important;
+        color: $primary-color !important;
     }
 }
 

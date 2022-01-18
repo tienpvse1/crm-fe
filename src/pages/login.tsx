@@ -6,7 +6,7 @@ import { controllers } from '../constance/controllers';
 import { envVars } from '../env/var.env';
 import { LottieBackGround } from '../components/background';
 import { motion } from 'framer-motion';
-import lottieFile from '../animation/plane.json';
+import lottieFile from '../animation/background-login.json';
 
 export const LoginPage = () => {
   const { AUTH } = controllers;

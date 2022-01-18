@@ -1,4 +1,4 @@
-@import './../base/color';
+@import './../base/variables';
 .line-chart {
     width: 72%;
     background-color: $light-background-color;
@@ -112,7 +112,7 @@
 }
 
 .dot {
-    background-color: #244791;
+    background-color: $bank-money;
     height: 10px;
     width: 10px;
     border-radius: 50%;

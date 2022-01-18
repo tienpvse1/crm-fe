@@ -1,3 +1,4 @@
+@import '../base/variables';
 .wrapper-droppable-columns {
     display: flex;
     flex-direction: row;
@@ -13,7 +14,7 @@
     padding: 10px;
     margin: 7px;
     border-radius: 5px;
-    background-color: #F5F5F5;
+    background-color: $wrapper-draggable-pipeline-column;
 }
 
 .pipeline-column {
@@ -22,7 +23,7 @@
 }
 
 .pipeline-column-header {
-    background-color: #E4E4E7;
+    background-color: $pipeline-column-header;
     border-radius: 5px;
     height: 40px;
     text-align: center;

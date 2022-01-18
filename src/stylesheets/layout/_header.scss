@@ -1,15 +1,20 @@
-@import '../base/color';
+@import '../base/variables';
 .header-layout-background {
     display: flex !important;
     background-color: $light-background-color !important;
     box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.3);
-    height: 67px !important;
     z-index: 2;
 }
 
 .items-dropdown-profile {
-    margin-top: 20px;
     box-shadow: $dropdown-box-shadow !important;
+    .ant-menu-item:hover {
+        background-color: $primary-color-hover;
+    }
+}
+
+.title-dropdown-profile {
+    width: 147px;
 }
 
 .items-dropdown-span {
