@@ -1,4 +1,4 @@
-import { Pipeline } from '@components/pipelines/pipeline';
+import { Pipeline } from '@pages/pipeline';
 import { Contact } from '@pages/contact';
 import { EmailCompose } from '@pages/email-compose';
 import { RouteObject } from 'react-router-dom';
