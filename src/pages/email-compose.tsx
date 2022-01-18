@@ -134,7 +134,7 @@ export const EmailCompose: React.FC = ({}) => {
         }}
         type='primary'
         danger
-        disabled={to.length = 0}
+        disabled={to.length === 0}
         loading={isLoading}
       >
         Send
