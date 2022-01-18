@@ -27,7 +27,7 @@ export const LoginPage = () => {
           <h1>Đăng Nhập</h1>
           <span>
             Không có tài khoản?
-            <Link to='/signup'> Đăng Ký với 1 thành viên </Link>
+            <Link to='/signup'> Đăng Ký</Link>
           </span>
         </div>
         <div className='content-login-form'>
