@@ -1,11 +1,11 @@
 import { ArrowDownOutlined, ArrowUpOutlined, BarChartOutlined, FileTextOutlined, FundOutlined, TeamOutlined } from '@ant-design/icons'
-import { IStatisticsCard } from '@interfaces/admin/statistics-card';
+import { ICardSales } from '@interfaces/admin/card-sales';
 import { Badge, Card } from 'antd';
-import { ThemeColor } from "../../constance/color";
+import { ThemeColor } from "../../../constance/color";
 
 
 interface CardSalesProps {
-  cardInfo: IStatisticsCard;
+  cardInfo: ICardSales;
   cardIndex: number;
 }
 

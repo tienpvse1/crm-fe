@@ -1,5 +1,5 @@
 
-export interface IStatisticsCard {
+export interface ICardSales {
   title: string;
   numberOfSales: string;
   percent: {

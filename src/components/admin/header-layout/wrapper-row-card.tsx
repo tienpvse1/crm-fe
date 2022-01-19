@@ -1,9 +1,9 @@
-import { IStatisticsCard } from '@interfaces/admin/statistics-card'
+import { ICardSales } from '@interfaces/admin/card-sales'
 import { Col, Row } from 'antd'
 import CardSales from './card-sales'
 
 interface WrapperRowCardProps {
-  dataCard: IStatisticsCard[];
+  dataCard: ICardSales[];
 }
 
 export const WrapperRowCard = ({ dataCard }: WrapperRowCardProps) => {

@@ -11,7 +11,7 @@ export const WrapperRowTitle = ({ children, title, titleSize }: WrapperRowTitleP
   return (
     <>
       <Row>
-        <Col className="wrapper-title-admin-page" span={24} >
+        <Col className="wrapper-title-page" span={24} >
           <span style={{ fontSize: `${titleSize}` }} className="title-admin-page">{title}</span>
           {children}
         </Col>

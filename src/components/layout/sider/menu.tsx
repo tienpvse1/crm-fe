@@ -13,13 +13,13 @@ const { SubMenu } = Menu;
 import { useLocation, useNavigate } from 'react-router-dom';
 import { LogoSider } from './logo-sider';
 
-interface Menu1Props {
+interface MenuSiderProps {
   onCollapse: () => void;
   style: object;
   collapsed: boolean;
 }
 
-export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
+export const MenuSider = ({ onCollapse, style, collapsed }: MenuSiderProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
