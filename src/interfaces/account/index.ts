@@ -1,5 +1,5 @@
 import { IPipeline } from "@interfaces/pipeline";
-import { Role } from "@interfaces/types";
+import { Role } from "@interfaces/type-roles";
 
 export interface IAccount {
   firstName: string;

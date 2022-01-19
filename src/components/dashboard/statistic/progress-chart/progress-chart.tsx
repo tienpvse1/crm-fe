@@ -1,4 +1,5 @@
-import { Tooltip, Progress, Row, Col } from 'antd';
+import { DashBoardAnnotation } from '@components/dashboard/dashboard-annotation';
+import { Tooltip, Progress } from 'antd';
 
 export const ProgressChart = () => {
     const MONEY = 14850;
@@ -11,16 +12,14 @@ export const ProgressChart = () => {
                         <span className='moneySub'>Month Sales</span>
                     </>
                 } width={200} type="circle" />
-                <Row gutter={[20, 12]}>
-                    <Col className='info' span={12} >
-                        <div className='dot'></div>
-                        <span className='title'>Bank Transfer </span>
-                    </Col>
-                    <Col className='info' span={12}>
-                        <div className='dot second'></div>
-                        <span className='title'>Credit Card</span>
-                    </Col>
-                </Row>
+                <DashBoardAnnotation
+                    titleDot1="Bank Transfer"
+                    titleDot2="Credit Card"
+                    styleNameDot1="dot"
+                    styleNameDot2="dot second"
+                    styleNameWrapperDot="info"
+                />
+
             </Tooltip>
         </div>
     )

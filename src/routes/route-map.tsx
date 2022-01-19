@@ -6,6 +6,7 @@ import { LayoutApp } from '../common/layout';
 import { HomePage } from '../pages/home';
 import { LoginPage } from '../pages/login';
 import { SignUpPage } from '../pages/signup';
+import { AdminPage } from '@pages/admin';
 
 export const route: RouteObject[] = [
   {
@@ -37,6 +38,10 @@ export const route: RouteObject[] = [
         path: 'email',
         element: <EmailCompose />,
       },
+      {
+        path: 'admin',
+        element: <AdminPage />
+      }
     ],
   },
   {

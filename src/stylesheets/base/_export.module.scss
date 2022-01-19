@@ -1,4 +1,6 @@
 @import 'variables';
 :export {
-    primaryColor: $primary-color
+    primaryColor: $primary-color;
+    percentColorIncrease: $percent-increase;
+    percentColorDecrease: $percent-decrease;
 }
