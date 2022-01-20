@@ -3,7 +3,7 @@ import { controllers } from '../../../../constance/controllers';
 import { data } from '../../../../interfaces/statistic/line-chart';
 const { X_FIELD, Y_FIELD } = controllers;
 export const LineChart = () => {
-    const config = {
+    const config: any = {
         data,
         xField: X_FIELD,
         yField: Y_FIELD,
@@ -27,8 +27,6 @@ export const LineChart = () => {
 
     };
     return (
-        <div className="line-chart">
-            <Line height={300} width={750} {...config} />
-        </div>
+        <Line height={300} width={750} {...config} />
     )
 }

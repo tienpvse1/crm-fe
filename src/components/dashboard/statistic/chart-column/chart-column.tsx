@@ -1,7 +1,5 @@
 import { Column } from '@ant-design/charts';
-import { DashBoardAnnotation } from '@components/dashboard/dashboard-annotation';
-import { ThemeColor } from "../../../constance/color";
-import { WrapperRowTitle } from '../../layout/title-pages/wrapper-row-title';
+import { ThemeColor } from "../../../../constance/color";
 
 const data = [
   {
@@ -74,18 +72,6 @@ const config: any = {
 export const ChartColumn = () => {
   return (
     <>
-      <WrapperRowTitle
-        title="Claims Over The Years"
-        titleSize="21px"
-        children={
-          <DashBoardAnnotation
-            titleDot1="Approved"
-            titleDot2="Submitted"
-            styleNameDot1="chart-dot-1"
-            styleNameDot2="chart-dot-2"
-            styleNameWrapperDot="graph-annotation"
-          />}
-      />
       <Column {...config} />
     </>
   )

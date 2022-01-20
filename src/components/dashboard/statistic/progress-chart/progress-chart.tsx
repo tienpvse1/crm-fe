@@ -1,26 +1,34 @@
-import { DashBoardAnnotation } from '@components/dashboard/dashboard-annotation';
-import { Tooltip, Progress } from 'antd';
+import { Progress, Tooltip } from "antd";
+import { ReactNode } from "react";
 
-export const ProgressChart = () => {
-    const MONEY = 14850;
-    return (
-        <div className='progress-chart'>
-            <Tooltip className='chart' title=" Bank Transfer /  Credit Card">
-                <Progress percent={60} strokeWidth={8} format={(percent?: number) =>
-                    <>
-                        <span className='moneyInfo'>${MONEY}</span>
-                        <span className='moneySub'>Month Sales</span>
-                    </>
-                } width={200} type="circle" />
-                <DashBoardAnnotation
-                    titleDot1="Bank Transfer"
-                    titleDot2="Credit Card"
-                    styleNameDot1="dot"
-                    styleNameDot2="dot second"
-                    styleNameWrapperDot="info"
-                />
-
-            </Tooltip>
-        </div>
-    )
+interface ProgressChartMiniProps {
+  tooltipText: string;
+  percent: number;
+  strokeWidth?: number;
+  width: number;
+  format?: ReactNode;
+  annotation?: ReactNode;
 }
+
+export const ProgressChart = ({
+  tooltipText,
+  percent,
+  strokeWidth = 5,
+  width,
+  format,
+  annotation
+}: ProgressChartMiniProps) => {
+  return (
+    <>
+      <Tooltip title={tooltipText}>
+        <Progress
+          percent={percent}
+          strokeWidth={strokeWidth}
+          format={() => format}
+          width={width}
+          type="circle" />
+        {annotation}
+      </Tooltip>
+    </>
+  );
+};

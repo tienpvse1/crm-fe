@@ -1,15 +1,24 @@
+import { ThemeColor } from '@constance/color';
 import { Col, Row } from 'antd'
-import { ChartColumn } from './chart-column'
+import { SubContentLeft } from './sub-content-left/sub-content-left';
+import { SubContentRight } from './sub-content-right/sub-content-right';
 
 export const ContentStatistic = () => {
+
   return (
     <>
-      <Row style={{ height: '500px' }} gutter={[48, 0]}>
+      <Row gutter={[42, 0]}>
         <Col span={14} >
-          <ChartColumn />
+          <SubContentLeft />
         </Col>
-        <Col span={10}  >
-          <div style={{ background: 'yellow', height: '100%' }}>789</div>
+        <Col
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            border: ThemeColor.cardBorder,
+            boxShadow: ThemeColor.boxShadowCardDashBoard
+          }} span={10}  >
+          <SubContentRight />
         </Col>
       </Row>
     </>

@@ -24,12 +24,6 @@
     box-shadow: $card-dashboard-shadow;
 }
 
-.chart {
-    flex-direction: column;
-    margin: 30px 0px;
-    padding-bottom: 10px;
-}
-
 .title {
     display: flex;
 }
@@ -57,11 +51,6 @@
     justify-content: center;
     -webkit-box-shadow: $card-dashboard-shadow;
     box-shadow: $card-dashboard-shadow;
-}
-
-.ant-card-head-title {
-    color: #244791;
-    font-weight: bold;
 }
 
 .feature-cover {
