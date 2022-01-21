@@ -1,6 +1,6 @@
 import { PlusOutlined, SearchOutlined } from "@ant-design/icons";
 import { Input, Col, Row, Button } from "antd"
-import { ButtonFilter } from "../button/button-filter"
+import { ButtonFilter } from "./button-filter"
 
 export const ContactHeader = () => {
     return (

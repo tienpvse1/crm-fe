@@ -1,6 +1,6 @@
 import { FilterOutlined } from '@ant-design/icons';
 import { Dropdown } from 'antd';
-import { MenuFilter } from '../menu/menu-filter';
+import { MenuFilter } from './menu-filter';
 
 export const ButtonFilter = () => {
 	return (

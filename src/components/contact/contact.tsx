@@ -1,4 +1,4 @@
-import { ContactData } from "./table/contact-table"
+import { ContactData } from "./contact-table"
 
 export const ContactContainer = () => {
 	return (
