@@ -1,7 +1,7 @@
 import { ThemeColor } from '@constance/color';
 import { Col, Row } from 'antd'
-import { SubContentLeft } from './sub-content-left/sub-content-left';
-import { SubContentRight } from './sub-content-right/sub-content-right';
+import { AdminColumnChart } from './sub-content-left/column-chart';
+import { SmallStatistic } from './sub-content-right/small-statistic';
 
 export const ContentStatistic = () => {
 
@@ -9,16 +9,18 @@ export const ContentStatistic = () => {
     <>
       <Row gutter={[42, 0]}>
         <Col span={14} >
-          <SubContentLeft />
+          <AdminColumnChart />
         </Col>
         <Col
+          span={10}
           style={{
             display: 'flex',
             alignItems: 'center',
             border: ThemeColor.cardBorder,
             boxShadow: ThemeColor.boxShadowCardDashBoard
-          }} span={10}  >
-          <SubContentRight />
+          }}
+        >
+          <SmallStatistic />
         </Col>
       </Row>
     </>

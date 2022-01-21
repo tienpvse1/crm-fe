@@ -1,7 +1,8 @@
 import { Progress, Tooltip } from "antd";
 import { ReactNode } from "react";
+import { useCountUp } from "react-countup";
 
-interface ProgressChartMiniProps {
+interface ProgressChartProps {
   tooltipText: string;
   percent: number;
   strokeWidth?: number;
@@ -17,12 +18,17 @@ export const ProgressChart = ({
   width,
   format,
   annotation
-}: ProgressChartMiniProps) => {
+}: ProgressChartProps) => {
+  const { countUp } = useCountUp({
+    end: percent,
+    duration: 4,
+    delay: 0.5
+  });
   return (
     <>
       <Tooltip title={tooltipText}>
         <Progress
-          percent={percent}
+          percent={countUp as number}
           strokeWidth={strokeWidth}
           format={() => format}
           width={width}

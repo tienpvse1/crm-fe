@@ -1,23 +1,12 @@
-import { TinyLine } from '@ant-design/charts';
-import { ArrowUpOutlined, SmileTwoTone } from '@ant-design/icons';
-import { ProgressChart } from '@components/dashboard/statistic/progress-chart/progress-chart';
+import { ArrowUpOutlined, StarFilled } from '@ant-design/icons';
+import { ProgressChart } from '@components/chart/progress-chart';
+import { TinyLineChart } from '@components/chart/tiny-line';
 import { ThemeColor } from '@constance/color';
 import { Col, Row } from 'antd';
 import { AvatarGroup } from './avatar-group';
 import { CardStatistic } from './card-statistic';
 
-export const SubContentRight = () => {
-  const data = [
-    264, 300, 417, 500, 400, 309, 200, 550, 520, 467, 513, 546, 983, 340, 539, 243, 226, 192,
-  ];
-  const config = {
-    width: 150,
-    height: 120,
-    autoFit: false,
-    data,
-    smooth: true,
-    color: '#d62728'//primary color
-  };
+export const SmallStatistic = () => {
 
   return <>
     <Row>
@@ -40,7 +29,7 @@ export const SubContentRight = () => {
               tooltipText="75% Achieved"
               percent={75}
               width={110}
-              format={<span className='icon-chart'><SmileTwoTone twoToneColor="#ebbf10" /></span>}
+              format={<span className='icon-chart'><StarFilled style={{color: '#FFEE58'}} /></span>}
             />
           }
         />
@@ -61,7 +50,7 @@ export const SubContentRight = () => {
               </span>
             </>
           }
-          chartComponent={<TinyLine {...config} />}
+          chartComponent={<TinyLineChart />}
         />
       </Col>
     </Row>

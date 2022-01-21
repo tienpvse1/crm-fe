@@ -1,15 +1,15 @@
-import { DashBoardAnnotation } from "@components/dashboard/dashboard-annotation";
-import { ChartColumn } from "@components/dashboard/statistic/chart-column/chart-column";
+import { ChartAnnotation } from "@components/chart/chart-annotation";
+import { ChartColumn } from "@components/chart/chart-column";
 import { WrapperRowTitle } from "@components/layout/title-pages/wrapper-row-title";
 
-export const SubContentLeft = () => {
+export const AdminColumnChart = () => {
   return (
     <>
       <WrapperRowTitle
         title="Claims Over The Years"
         titleSize="21px"
         children={
-          <DashBoardAnnotation
+          <ChartAnnotation
             titleDot1="Approved"
             titleDot2="Submitted"
             styleNameDot1="chart-dot-1"

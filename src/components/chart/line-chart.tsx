@@ -1,6 +1,6 @@
 import { Line } from '@ant-design/plots';
-import { controllers } from '../../../../constance/controllers';
-import { data } from '../../../../interfaces/statistic/line-chart';
+import { controllers } from '../../constance/controllers';
+import { data } from '../../interfaces/statistic/line-chart';
 const { X_FIELD, Y_FIELD } = controllers;
 export const LineChart = () => {
     const config: any = {
@@ -20,10 +20,10 @@ export const LineChart = () => {
         animation: {
             appear: {
                 animation: 'path-in',
-                duration: 3000,
+                duration: 2000,
             },
         },
-        color: ['#5E35B1', '#FFEE58', '#795548', '#212121', '#DD2C00']
+        color: ['#5E35B1', '#FFEE58', '#DD2C00']
 
     };
     return (

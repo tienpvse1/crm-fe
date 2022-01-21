@@ -4,50 +4,51 @@ import { ICardSales } from "@interfaces/admin/card-sales";
 import { Col, Row } from "antd"
 import { WrapperRowTitle } from "@components/layout/title-pages/wrapper-row-title";
 import { ContentStatistic } from "@components/admin/content-statistic-layout/content-statistic";
+import { TableTopSales } from "@components/admin/footer-layout/table-top-sales";
 
-const dataCard: ICardSales[] =
-  [
-    {
-      title: 'Product Sold',
-      numberOfSales: '13.8k',
-      percent: {
-        status: 'increase',
-        value: 12
-      },
-      color: '#fff3f0'
-    },
-    {
-      title: 'Total Profit',
-      numberOfSales: '$1.237k',
-      percent: {
-        status: 'decrease',
-        value: 13
-      },
-      color: '#fff6f0'
-    },
-    {
-      title: 'Total No. of Claims',
-      numberOfSales: '1.3M',
-      percent: {
-        status: 'increase',
-        value: 10
-      },
-      color: '#fffbf0'
-    },
-    {
-      title: 'New Customer',
-      numberOfSales: '25.6k',
-      percent: {
-        status: 'increase',
-        value: 9
-      },
-      color: '#f0f6ff'
-    }
-
-  ]
 
 export const AdminPage = () => {
 
+  const dataCard: ICardSales[] =
+    [
+      {
+        title: 'Product Sold',
+        numberOfSales: '13.8k',
+        percent: {
+          status: 'increase',
+          value: 12
+        },
+        color: '#fff3f0'
+      },
+      {
+        title: 'Total Profit',
+        numberOfSales: '$1.237k',
+        percent: {
+          status: 'decrease',
+          value: 13
+        },
+        color: '#fff6f0'
+      },
+      {
+        title: 'Total No. of Claims',
+        numberOfSales: '1.3M',
+        percent: {
+          status: 'increase',
+          value: 10
+        },
+        color: '#fffbf0'
+      },
+      {
+        title: 'New Customer',
+        numberOfSales: '25.6k',
+        percent: {
+          status: 'increase',
+          value: 9
+        },
+        color: '#f0f6ff'
+      }
+
+    ]
   return (
     <>
       <WrapperRowTitle
@@ -64,8 +65,8 @@ export const AdminPage = () => {
           <ContentStatistic />
         </Col>
 
-        <Col className="table-admin-page" style={{ height: '400px' }} span={24}>
-          <div style={{ background: '#0092ff', height: '100%' }}>101112</div>
+        <Col className="table-admin-page" style={{ height: '420px' }} span={24}>
+          <TableTopSales />
         </Col>
       </Row>
     </>

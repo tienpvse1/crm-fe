@@ -13,7 +13,7 @@ interface GraphAnnotationProps {
   styleWrapperDot2?: CSSProperties;
 }
 
-export const DashBoardAnnotation = ({
+export const ChartAnnotation = ({
   titleDot1,
   titleDot2,
   styleNameDot1,

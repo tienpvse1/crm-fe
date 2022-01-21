@@ -13,7 +13,7 @@
 }
 
 .number-of-sales {
-    font-size: 40px;
+    font-size: 35px;
     color: $primary-text-color;
     font-weight: 600;
 }
@@ -136,4 +136,37 @@
 
 .icon-chart {
     font-size: 30px;
+}
+
+//----------------------------------------------------------------------------------
+.table-font-size {
+    font-size: 16px;
+    color: $primary-text-color;
+    font-weight: 600;
+}
+
+.table-font-size-2 {
+    @extend .note-report;
+}
+
+.table-admin-page {
+    .ant-table-thead {
+        display: none;
+    }
+    .ant-table-tbody>tr>td {
+        border-bottom: none;
+    }
+    .column-name {
+        margin-left: 15px;
+        @extend .table-font-size;
+    }
+    .column-amount {
+        @extend .table-font-size;
+    }
+    .column-products {
+        @extend .table-font-size-2;
+    }
+    .column-premium {
+        @extend .table-font-size-2;
+    }
 }
