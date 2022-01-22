@@ -1,12 +1,17 @@
 import { TOKEN } from '@constance/cookie';
 import { getCookies } from '@cookies';
-import { LayoutProps, Layout } from 'antd';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Layout } from 'antd';
+import { ReactNode } from 'react';
+import { Navigate } from 'react-router-dom';
 import { ContentApp } from './app-content';
 import { SiderApp } from './sider';
 
+interface LayoutAppProps {
+  content: ReactNode;
+  menuSider: ReactNode;
+}
 
-export const LayoutApp: React.FC<LayoutProps> = () => {
+export const LayoutApp = ({ content, menuSider }: LayoutAppProps) => {
 
   const token = getCookies(TOKEN);
   if (!token[0]) return <Navigate to={'/login'} />;
@@ -15,10 +20,12 @@ export const LayoutApp: React.FC<LayoutProps> = () => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <SiderApp />
+      <SiderApp>
+        {menuSider}
+      </SiderApp>
 
       <ContentApp>
-        <Outlet />
+        {content}
       </ContentApp>
     </Layout>
   );

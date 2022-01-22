@@ -3,7 +3,7 @@ import {
   CalendarOutlined,
   CodeSandboxOutlined,
   ContactsOutlined,
-  HomeOutlined,
+  FundOutlined,
   PlusOutlined,
   UserOutlined,
   WalletOutlined,
@@ -11,20 +11,16 @@ import {
 import { Menu } from 'antd';
 const { SubMenu } = Menu;
 import { useLocation, useNavigate } from 'react-router-dom';
-import { LogoSider } from './logo-sider';
 
-interface MenuSiderProps {
-  onCollapse: () => void;
+interface MenuSiderUserProps {
   style: object;
-  collapsed: boolean;
 }
 
-export const MenuSider = ({ onCollapse, style, collapsed }: MenuSiderProps) => {
+export const MenuSiderUser = ({ style }: MenuSiderUserProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
     <>
-      <LogoSider onCollapse={onCollapse} collapsed={collapsed} />
       <Menu
         defaultOpenKeys={['sub1']}
         // @ts-ignore
@@ -39,9 +35,9 @@ export const MenuSider = ({ onCollapse, style, collapsed }: MenuSiderProps) => {
           key='home'
           style={style}
           onClick={() => navigate('/')}
-          icon={<HomeOutlined style={style} />}
+          icon={<FundOutlined style={style} />}
         >
-          Home
+          Dashboard
         </Menu.Item>
 
         <Menu.Item

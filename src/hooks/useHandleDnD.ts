@@ -1,11 +1,11 @@
-import { IPipeline, IPipelineColumns } from "@interfaces/pipeline";
+import { IPipeline, IPipelineColumn } from "@interfaces/pipeline";
 import { useState } from "react";
 
 export const useHandleDnD = (data: IPipeline[]) => {
 
   const [pipeline, setPipeline] = useState(data);
 
-  const setNewPipeline = (newColumn: IPipelineColumns[]) => {
+  const setNewPipeline = (newColumn: IPipelineColumn[]) => {
     const newState = [
       {
         ...pipeline[0],
