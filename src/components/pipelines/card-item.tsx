@@ -8,7 +8,6 @@ interface PipelineCardItemProps {
 }
 
 export const PipelineCardItem = ({ dataCardPipeline }: PipelineCardItemProps) => {
-  console.log('changed');
   
   return (
     <>

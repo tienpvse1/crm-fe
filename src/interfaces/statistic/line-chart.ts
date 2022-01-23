@@ -13,7 +13,7 @@ export const data = [
   {
     name: 'China',
     year: '2018',
-    gdp: 13608151864637.9,
+    gdp: 13608151864637.9
   },
   {
     name: 'United States',

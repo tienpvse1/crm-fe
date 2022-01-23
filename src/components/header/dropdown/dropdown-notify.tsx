@@ -1,4 +1,4 @@
-import { Menu, Tabs } from "antd"
+import { Tabs } from "antd"
 import { ListMessage } from "../list/list-message";
 import { ListNotify } from "../list/list-notify";
 import { ListToDo } from "../list/list-todo";
@@ -8,14 +8,9 @@ const { TabPane } = Tabs;
 
 export const DropdownContent = () => {
     return (
-        <Menu
-            style={{
-                padding: '0 20px 20px 20px',
-                marginTop: '21px ',
-                width: '325px',
-                borderRadius: '3px',
-                boxShadow: '0px 3px 3px 3px rgba(0, 0, 0, 0.15)'
-            }}>
+        <div
+            className="dropdown-notify"
+        >
             <Tabs defaultActiveKey="1" centered>
                 <TabPane tab={
                     <span>
@@ -45,6 +40,6 @@ export const DropdownContent = () => {
                     <ListToDo />
                 </TabPane>
             </Tabs>
-        </Menu>
+        </div>
     )
 }

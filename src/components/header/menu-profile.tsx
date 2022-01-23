@@ -4,7 +4,7 @@ import { MenuProfile } from './dropdown/dropdown-profile';
 export const DropdownProfile = () => {
   return (
     <Dropdown overlay={<MenuProfile />}>
-      <a className='ant-dropdown-link'>
+      <div className='ant-dropdown-link'>
         <Avatar
           src='https://joeschmoe.io/api/v1/random'
           size={30}
@@ -20,7 +20,7 @@ export const DropdownProfile = () => {
         >
           Tokuda
         </span>
-      </a>
+      </div>
     </Dropdown>
   );
 };

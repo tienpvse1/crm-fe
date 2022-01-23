@@ -5,11 +5,11 @@ import {
   ContactsOutlined,
   HomeOutlined,
   PlusOutlined,
-  StockOutlined,
   UserOutlined,
   WalletOutlined,
 } from '@ant-design/icons';
 import { Menu } from 'antd';
+const { SubMenu } = Menu;
 import { useLocation, useNavigate } from 'react-router-dom';
 import { LogoSider } from './logo-sider';
 
@@ -83,9 +83,8 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
         </Menu.Item>
 
         {/* ----------------------------------------------------------- */}
-
-        <Menu.SubMenu
-          key={'sub1'}
+        <SubMenu
+          key='sub1'
           title={
             <div
               style={{
@@ -157,7 +156,8 @@ export const Menu1 = ({ onCollapse, style, collapsed }: Menu1Props) => {
             />
             Add plugin
           </Menu.Item>
-        </Menu.SubMenu>
+        </SubMenu>
+
       </Menu>
     </>
   );

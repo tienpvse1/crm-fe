@@ -1,9 +1,9 @@
-import { IPipelineColumns } from "@interfaces/pipeline"
+import { IPipelineColumn } from "@interfaces/pipeline"
 import { Draggable } from "react-beautiful-dnd"
 import { PipelineItems } from "./items"
 
 interface PipeLineColumnProps {
-  pipelineColumn: IPipelineColumns,
+  pipelineColumn: IPipelineColumn,
   index: number;
 }
 

@@ -1,7 +1,7 @@
 import { Menu1 } from './menu-1';
 
 const style = {
-  fontSize: 18,
+  fontSize: 17,
 };
 
 interface MenuNavigatorProps {
