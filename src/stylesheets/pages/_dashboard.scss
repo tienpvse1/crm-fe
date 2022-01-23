@@ -2,7 +2,7 @@
 .line-chart {
     width: 72%;
     background-color: $light-background-color;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: $card-border;
     -webkit-box-shadow: $card-dashboard-shadow;
     box-shadow: $card-dashboard-shadow;
     margin: 0 20px;
@@ -12,22 +12,17 @@
 
 .progress-chart {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 23.5%;
     height: 340px;
     border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    align-items: center;
-    justify-content: center;
+    border: $card-border;
     background-color: $light-background-color;
     padding: 10px;
     -webkit-box-shadow: $card-dashboard-shadow;
     box-shadow: $card-dashboard-shadow;
-}
-
-.chart {
-    flex-direction: column;
-    margin: 30px 0px;
-    padding-bottom: 10px;
 }
 
 .title {
@@ -59,11 +54,6 @@
     box-shadow: $card-dashboard-shadow;
 }
 
-.ant-card-head-title {
-    color: #244791;
-    font-weight: bold;
-}
-
 .feature-cover {
     padding-left: 7px !important;
 }
@@ -79,11 +69,11 @@
 }
 
 .featureRate {
-    color: green;
+    color: $percent-increase;
 }
 
 .featureRate.negative {
-    color: red;
+    color: $percent-decrease;
 }
 
 .featureIcon {
@@ -116,10 +106,7 @@
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    margin-top: 10px;
     margin-right: 5px;
-    align-items: center;
-    justify-content: center;
     &.second {
         background-color: $primary-color;
     }
