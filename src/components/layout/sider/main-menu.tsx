@@ -1,7 +1,7 @@
-import { Menu1 } from './menu-1';
+import { MenuSider } from './menu';
 
 const style = {
-  fontSize: 18,
+  fontSize: 17,
 };
 
 interface MenuNavigatorProps {
@@ -12,7 +12,7 @@ interface MenuNavigatorProps {
 export const MenuNavigator = ({ onCollapse, collapsed }: MenuNavigatorProps) => {
   return (
     <>
-      <Menu1 onCollapse={onCollapse} collapsed={collapsed} style={style} />
+      <MenuSider onCollapse={onCollapse} collapsed={collapsed} style={style} />
     </>
   );
 };

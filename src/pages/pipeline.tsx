@@ -1,9 +1,11 @@
 import { useHandleDnD } from '@hooks/useHandleDnD';
 import { IPipeline } from '@interfaces/pipeline';
 import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd'
-import { PipeLineColumn } from './column';
+import { PipeLineColumn } from '../components/pipelines/column';
 
 export const Pipeline = () => {
+
+  //useQuery<IPipeline> -> pipeLineDataApi
 
   const pipeLineDataApi: IPipeline[] = [
     {
@@ -168,7 +170,6 @@ export const Pipeline = () => {
   }
 
   return (
-
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable
         droppableId="all-columns"

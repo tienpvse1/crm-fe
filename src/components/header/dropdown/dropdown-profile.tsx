@@ -15,7 +15,7 @@ export const MenuProfile = () => {
     navigate('/login');
   };
   return (
-    <Menu style={{ marginTop: '20px', borderRadius: '10px' }}>
+    <Menu className='items-dropdown-profile'>
       <Menu.Item key='profile'>
         <>
           <UserOutlined style={{ color: 'rgba(0,0,0,0.8)' }} />

@@ -12,8 +12,10 @@ export const LoginForm = () => {
     mutate(authDto);
   };
   if (data) {
+    //TODO: update data 
     setCookie(TOKEN, data.data || '', 7);
     return <Navigate to={'/'} replace />;
+    //return <Navigate to={'/${data.role}'} replace />;
   }
 
   return (

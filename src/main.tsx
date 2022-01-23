@@ -1,5 +1,5 @@
 import { ErrorPage } from '@pages/error';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.variable.min.css';
 import React from 'react';
 import { CookiesProvider } from 'react-cookie';
 import ReactDOM from 'react-dom';
@@ -12,7 +12,7 @@ ReactDOM.render(
     <ErrorBoundary fallback={<ErrorPage />}>
       <CookiesProvider>
         <BrowserRouter>
-          <App />
+            <App />
         </BrowserRouter>
       </CookiesProvider>
     </ErrorBoundary>

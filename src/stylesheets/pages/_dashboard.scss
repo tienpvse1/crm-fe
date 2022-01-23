@@ -1,9 +1,10 @@
+@import './../base/variables';
 .line-chart {
     width: 72%;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
+    background-color: $light-background-color;
+    border: $card-border;
+    -webkit-box-shadow: $card-dashboard-shadow;
+    box-shadow: $card-dashboard-shadow;
     margin: 0 20px;
     border-radius: 8px;
     padding: 20px;
@@ -11,22 +12,17 @@
 
 .progress-chart {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 23.5%;
     height: 340px;
     border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+    border: $card-border;
+    background-color: $light-background-color;
     padding: 10px;
-    -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
-}
-
-.chart {
-    flex-direction: column;
-    margin: 30px 0px;
-    padding-bottom: 10px;
+    -webkit-box-shadow: $card-dashboard-shadow;
+    box-shadow: $card-dashboard-shadow;
 }
 
 .title {
@@ -39,7 +35,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    color: #244791;
+    color: $primary-text-color;
 }
 
 .site-card-wrapper {
@@ -54,13 +50,8 @@
     border-radius: 8px;
     align-items: center;
     justify-content: center;
-    -webkit-box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: -2px 3px 3px 1px rgba(0, 0, 0, 0.05);
-}
-
-.ant-card-head-title {
-    color: #244791;
-    font-weight: bold;
+    -webkit-box-shadow: $card-dashboard-shadow;
+    box-shadow: $card-dashboard-shadow;
 }
 
 .feature-cover {
@@ -70,25 +61,29 @@
 .feature-info {
     font-size: 25px;
     font-weight: 500;
-    color: #244791;
+    color: $primary-text-color;
+}
+
+.ant-card-head-title {
+    color: $primary-text-color;
 }
 
 .featureRate {
-    color: green;
+    color: $percent-increase;
 }
 
 .featureRate.negative {
-    color: red;
+    color: $percent-decrease;
 }
 
 .featureIcon {
     font-size: 50px;
-    color: #3c76f1 !important;
+    color: $primary-color;
 }
 
 .featureSub {
     display: flex;
-    color: #d8e4fc;
+    color: $secondary-text-color;
     font-weight: 400;
 }
 
@@ -97,7 +92,7 @@
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    color: #6391f4;
+    color: $tertiary-text-color;
 }
 
 .info {
@@ -107,16 +102,13 @@
 }
 
 .dot {
-    background-color: #244791;
+    background-color: $bank-money;
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    margin-top: 10px;
     margin-right: 5px;
-    align-items: center;
-    justify-content: center;
     &.second {
-        background-color: #6391f4;
+        background-color: $primary-color;
     }
 }
 

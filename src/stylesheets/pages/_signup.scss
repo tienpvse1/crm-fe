@@ -6,7 +6,6 @@
     height: 580px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    color: white;
     border-radius: 18px;
 }
 
@@ -40,12 +39,6 @@
     font-size: 16px !important;
     font-weight: 400;
     height: 35px !important;
-    background-color: #0047ab !important;
-    border-color: #0047ab !important;
-    &:hover {
-        background-color: #0073cf !important;
-        border-color: #0073cf !important;
-    }
 }
 
 .ant-checkbox-inner {
