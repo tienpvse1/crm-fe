@@ -43,7 +43,7 @@ export const route: RouteObject[] = [
     ],
   },
   {
-    path: '/admin',
+    path: '/administrator ',
     element: <LayoutAdmin />,
     children: [
       {

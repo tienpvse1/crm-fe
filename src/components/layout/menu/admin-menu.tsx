@@ -24,14 +24,14 @@ export const MenuSiderAdmin = ({ style }: MenuSiderAdminProps) => {
         selectedKeys={
           location.pathname.split('/')[2]?.length > 0
             ? location.pathname.split('/')[2]
-            : 'admin'
+            : 'administrator '
         }
         mode='inline'
       >
         <Menu.Item
-          key='admin'
+          key='administrator '
           style={style}
-          onClick={() => navigate('/admin')}
+          onClick={() => navigate('/administrator ')}
           icon={<AppstoreOutlined style={style} />}
         >
           Dashboard

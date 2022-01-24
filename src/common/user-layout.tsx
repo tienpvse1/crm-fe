@@ -15,7 +15,7 @@ export const LayoutUser = () => {
   if (!token[0].token) return <Navigate to={'/login'} />;
 
   if (cookies.public_user_info?.role === Role.ADMIN)
-    return <Navigate to={'/admin'} />;
+    return <Navigate to={'/administrator '} />;
 
 
   return (
