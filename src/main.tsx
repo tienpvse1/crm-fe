@@ -9,10 +9,10 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ErrorBoundary fallback={<ErrorPage />}>
+    <ErrorBoundary FallbackComponent={ErrorPage}>
       <CookiesProvider>
         <BrowserRouter>
-            <App />
+          <App />
         </BrowserRouter>
       </CookiesProvider>
     </ErrorBoundary>
