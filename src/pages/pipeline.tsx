@@ -1,11 +1,12 @@
+import { WrapperRowTitle } from '@components/layout/title-pages/wrapper-row-title';
+import { ScrollBarHorizontal } from '@components/pipelines/scrollbar/scrollbar-horizontal';
+import { SearchBar } from '@components/search-bar';
 import { useHandleDnD } from '@hooks/useHandleDnD';
 import { IPipeline } from '@interfaces/pipeline';
 import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd'
 import { PipeLineColumn } from '../components/pipelines/column';
 
 export const Pipeline = () => {
-
-  //useQuery<IPipeline> -> pipeLineDataApi
 
   const pipeLineDataApi: IPipeline[] = [
     {
@@ -127,7 +128,7 @@ export const Pipeline = () => {
   ]
 
   const totalColumn = pipeLineDataApi[0].pipelineColumns.length;
-  const widthOfItem = 335;
+  const widthOfItem = 333;
 
   const {
     pipeline,
@@ -170,29 +171,35 @@ export const Pipeline = () => {
   }
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable
-        droppableId="all-columns"
-        direction="horizontal"
-        type="column"
-      >
-        {(providedColumns) => (
-          <div className='scroll-menu'>
-            <div
-              className='wrapper-droppable-columns'
-              style={{ width: `${widthOfItem * totalColumn}px` }}
-              {...providedColumns.droppableProps}
-              ref={providedColumns.innerRef}
-            >
-              {pipeline[0].pipelineColumns.map((pipeline, index) =>
-                <PipeLineColumn index={index} key={pipeline.name} pipelineColumn={pipeline} />)
-              }
-              {providedColumns.placeholder}
-            </div>
-          </div>
-
-        )}
-      </Droppable>
-    </DragDropContext>
+    <>
+      <WrapperRowTitle
+        title="Agreements"
+        titleSize="27px"
+        children={<SearchBar placeholder="Search for id, name or phone number" />}
+      />
+      <ScrollBarHorizontal>
+        <DragDropContext onDragEnd={onDragEnd}>
+          <Droppable
+            droppableId="all-columns"
+            direction="horizontal"
+            type="column"
+          >
+            {(providedColumns) => (
+              <div
+                className='wrapper-droppable-columns'
+                style={{ width: `${widthOfItem * totalColumn}px` }}
+                {...providedColumns.droppableProps}
+                ref={providedColumns.innerRef}
+              >
+                {pipeline[0].pipelineColumns.map((pipeline, index) =>
+                  <PipeLineColumn index={index} key={pipeline.name} pipelineColumn={pipeline} />)
+                }
+                {providedColumns.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
+      </ScrollBarHorizontal>
+    </>
   )
 }

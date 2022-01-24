@@ -9,6 +9,6 @@ export const authenticateUser = async (authDto: IAuthDto) => {
   const { data } = await instance.post(AUTH, {
     ...authDto,
   });
-  setToken(data.data);
+  setToken(data.data.token);
   return data as IAuth;
 };
