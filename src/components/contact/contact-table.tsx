@@ -2,7 +2,7 @@ import { DeleteOutlined, FormOutlined } from '@ant-design/icons';
 import { data } from '@interfaces/contact/list-contact';
 import { Button, Space, Table, Tag } from 'antd';
 import Column from 'antd/lib/table/Column';
-import { ContactHeader } from '../header/contact-header';
+import { ContactHeader } from './contact-header';
 
 const rowSelection = {
   onChange: (selectedRowKeys: React.Key[], selectedRows: any[]) => {},

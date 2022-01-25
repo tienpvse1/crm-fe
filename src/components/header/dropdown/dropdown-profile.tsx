@@ -16,9 +16,12 @@ export const MenuProfile = () => {
     removeCookie(PUBLIC_USER_INFO);
     navigate('/login');
   };
+  const handleNavigateProfile = () => {
+    navigate('/account')
+  }
   return (
-    <Menu className='items-dropdown-profile'>
-      <Menu.Item key='profile'>
+    <Menu style={{ marginTop: '20px', borderRadius: '10px' }}>
+      <Menu.Item key='profile' onClick={handleNavigateProfile}>
         <>
           <UserOutlined style={{ color: 'rgba(0,0,0,0.8)' }} />
           <span style={{ fontSize: '16px', color: 'rgba(0,0,0,0.8)' }}>
@@ -26,7 +29,7 @@ export const MenuProfile = () => {
           </span>
         </>
       </Menu.Item>
-      {/* <Menu.Item key='setting'>
+      {/* <Menu.Item key='setting' onClick={handleNavigateSetting}>
         <>
           <SettingOutlined style={{ color: 'rgba(0,0,0,0.8)' }} />
           <span style={{ fontSize: '16px', color: 'rgba(0,0,0,0.8)' }}>
