@@ -14,11 +14,8 @@ export const MenuProfile = () => {
     removeCookie(TOKEN);
     navigate('/login');
   };
-  const handleNavigateSetting = () => {
-    navigate('/setting')
-  }
   const handleNavigateProfile = () => {
-    navigate('/profile')
+    navigate('/account')
   }
   return (
     <Menu style={{ marginTop: '20px', borderRadius: '10px' }}>
@@ -30,14 +27,14 @@ export const MenuProfile = () => {
           </span>
         </>
       </Menu.Item>
-      <Menu.Item key='setting' onClick={handleNavigateSetting}>
+      {/* <Menu.Item key='setting' onClick={handleNavigateSetting}>
         <>
           <SettingOutlined style={{ color: 'rgba(0,0,0,0.8)' }} />
           <span style={{ fontSize: '16px', color: 'rgba(0,0,0,0.8)' }}>
             Settings
           </span>
         </>
-      </Menu.Item>
+      </Menu.Item> */}
       <Menu.Divider />
       <Menu.Item key='logout' onClick={handleLogout}>
         <LogoutOutlined style={{ color: 'rgba(0,0,0,0.8)' }} />

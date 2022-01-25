@@ -1,7 +1,6 @@
 import { Pipeline } from '@components/pipelines/pipeline';
 import { Contact } from '@pages/contact';
 import { EmailCompose } from '@pages/email-compose';
-import { ProfilePage } from '@pages/profile';
 import { SettingPage } from '@pages/setting';
 import { RouteObject } from 'react-router-dom';
 import { LayoutApp } from '../common/layout';
@@ -40,12 +39,8 @@ export const route: RouteObject[] = [
         element: <EmailCompose />,
       },
       {
-        path: 'setting',
+        path: 'account',
         element: <SettingPage />,
-      },
-      {
-        path: 'profile',
-        element: <ProfilePage />,
       },
     ],
   },
