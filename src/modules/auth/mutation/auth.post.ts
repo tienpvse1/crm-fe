@@ -1,4 +1,4 @@
-import { instance } from '../../../axios';
+import { Axios } from '@axios';
 import { controllers } from '../../../constance/controllers';
 import { setToken } from '../../../cookies';
 import { IAuthDto } from '../dto/auth.dto';
@@ -6,9 +6,10 @@ import { IAuth } from '../entity/auth.entity';
 
 const { AUTH } = controllers;
 export const authenticateUser = async (authDto: IAuthDto) => {
-  const { data } = await instance.post(AUTH, {
+  const { instance } = new Axios();
+  const { data } = await instance.post<IAuth>(AUTH, {
     ...authDto,
   });
-  setToken(data.data);
-  return data as IAuth;
+  setToken(data.token);
+  return data;
 };

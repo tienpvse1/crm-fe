@@ -11,7 +11,7 @@ export const ContentApp: React.FC = ({ children }) => {
 
             {/* Content */}
             <Content style={{ margin: '0 16px' }}>
-                <Breadcrumb style={{ margin: '20px 0px 0px 25px', fontSize: 19 }}>
+                <Breadcrumb style={{ margin: '20px 0px 0px 25px', fontSize: 18 }}>
                     <Breadcrumb.Item>User</Breadcrumb.Item>
                     <Breadcrumb.Item>Bill</Breadcrumb.Item>
                 </Breadcrumb>

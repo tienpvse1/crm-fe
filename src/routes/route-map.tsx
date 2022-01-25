@@ -1,12 +1,15 @@
-import { Pipeline } from '@components/pipelines/pipeline';
+import { Pipeline } from '@pages/pipeline';
 import { Contact } from '@pages/contact';
 import { EmailCompose } from '@pages/email-compose';
 import { SettingPage } from '@pages/setting';
 import { RouteObject } from 'react-router-dom';
-import { LayoutApp } from '../common/layout';
 import { HomePage } from '../pages/home';
 import { LoginPage } from '../pages/login';
 import { SignUpPage } from '../pages/signup';
+import { LayoutAdmin } from '@common/admin-layout';
+import { AdminPage } from '@pages/admin';
+import { LayoutUser } from '@common/user-layout';
+
 
 export const route: RouteObject[] = [
   {
@@ -20,7 +23,7 @@ export const route: RouteObject[] = [
 
   {
     path: '/',
-    element: <LayoutApp />,
+    element: <LayoutUser />,
     children: [
       {
         index: true,
@@ -43,6 +46,16 @@ export const route: RouteObject[] = [
         element: <SettingPage />,
       },
     ],
+  },
+  {
+    path: '/admin',
+    element: <LayoutAdmin />,
+    children: [
+      {
+        index: true,
+        element: <AdminPage />
+      }
+    ]
   },
   {
     path: '/*',

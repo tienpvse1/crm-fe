@@ -1,6 +1,5 @@
 import { Col, Row } from 'antd';
 import { controllers } from '../../../constance/controllers';
-import 'antd/dist/antd.css';
 import { CardMoney, CardOrders, CardSale, CardTicket } from './card';
 
 const { SIZE_CARD, SIZE_OFFSET } = controllers;

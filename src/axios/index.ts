@@ -4,13 +4,6 @@ import { envVars } from '../env/var.env';
 
 const baseURL = envVars.VITE_BE_BASE_URL;
 
-export const instance = axios.create({
-  baseURL,
-  headers: {
-    Authorization: getToken(),
-  },
-});
-
 export class Axios {
   instance: AxiosInstance;
 
@@ -20,6 +13,16 @@ export class Axios {
       headers: {
         Authorization: `Bearer ${getToken()}`,
       },
+    });
+    this.instance.interceptors.response.use(function (response) {
+      // Any status code that lie within the range of 2xx cause this function to trigger
+      // Do something with response data
+      
+      return response.data;
+    }, function (error) {
+      // Any status codes that falls outside the range of 2xx cause this function to trigger
+      // Do something with response error
+      return Promise.reject(error);
     });
   }
 }

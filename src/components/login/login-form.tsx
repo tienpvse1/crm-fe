@@ -1,5 +1,6 @@
-import { TOKEN } from '@constance/cookie';
+import { PUBLIC_USER_INFO } from '@constance/cookie';
 import { setCookie } from '@cookies';
+import { Role } from '@interfaces/type-roles';
 import { IAuthDto } from '@modules/auth/dto/auth.dto';
 import { authenticateUser } from '@modules/auth/mutation/auth.post';
 import { Button, Checkbox, Form, Input } from 'antd';
@@ -11,9 +12,15 @@ export const LoginForm = () => {
   const handleLogin = async (authDto: IAuthDto) => {
     mutate(authDto);
   };
-  if (data) {
-    setCookie(TOKEN, data.data || '', 7);
+  if (data) {    
+    const publicData = JSON.stringify(data.publicData);
+    setCookie(PUBLIC_USER_INFO, publicData || '', 7);
+
+    if(data.publicData.role == Role.ADMIN)
+      return <Navigate to={'/admin'} replace />;
+
     return <Navigate to={'/'} replace />;
+
   }
 
   return (

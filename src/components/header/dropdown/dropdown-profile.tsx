@@ -3,15 +3,17 @@ import {
   SettingOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import { TOKEN } from '@constance/cookie';
-import { removeCookie } from '@cookies';
+import { TOKEN, PUBLIC_USER_INFO } from '@constance/cookie';
 import { Menu } from 'antd';
+import { useCookies } from 'react-cookie';
 import { useNavigate } from 'react-router-dom';
 
 export const MenuProfile = () => {
   const navigate = useNavigate();
+  const [_, __, removeCookie] = useCookies();
   const handleLogout = () => {
     removeCookie(TOKEN);
+    removeCookie(PUBLIC_USER_INFO);
     navigate('/login');
   };
   const handleNavigateProfile = () => {
