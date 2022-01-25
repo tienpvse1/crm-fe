@@ -1,19 +1,31 @@
-import { WrapperRowTitle } from '@components/layout/title-pages/wrapper-row-title';
+import { PageTitlePipeline } from '@components/pipelines/page-title';
 import { ScrollBarHorizontal } from '@components/pipelines/scrollbar/scrollbar-horizontal';
-import { SearchBar } from '@components/search-bar';
 import { useHandleDnD } from '@hooks/useHandleDnD';
-import { IPipeline } from '@interfaces/pipeline';
+import { IPipelineColumn } from '@modules/pipeline-column/entity/pipeline-column.entity';
+import { IPipeline } from '@modules/pipeline/entity/pipeline.entity';
+import { FC } from 'react';
 import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd'
 import { PipeLineColumn } from '../components/pipelines/column';
 
-export const Pipeline = () => {
+export const Pipeline: FC = () => {
+
+  // const { data } = useGetPipeLineUser();
+  // console.log('fetch-data:', data?.length);
 
   const pipeLineDataApi: IPipeline[] = [
     {
-      name: "string",
+      id: '',
+      createdAt: null!,
+      deletedAt: null!,
+      updatedAt: null!,
+      name: "Pipeline Default",
       account: null!,
       pipelineColumns: [
         {
+          id: '',
+          createdAt: null!,
+          deletedAt: null!,
+          updatedAt: null!,
           name: "todo",
           pipeline: "string",
           pipelineItems: [
@@ -24,110 +36,32 @@ export const Pipeline = () => {
               deletedAt: null!,
               updatedAt: null!,
               pipelineColumn: null!
-            },
-            {
-              id: "t2",
-              name: "my todo 2",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
-            },
-            {
-              id: "t3",
-              name: "my todo 3",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
-            },
-            {
-              id: "t4",
-              name: "my todo 4",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
             }
           ]
         },
         {
+          id: '',
+          createdAt: null!,
+          deletedAt: null!,
+          updatedAt: null!,
           name: "inProgress",
           pipeline: "string",
-          pipelineItems: [
-            {
-              id: "i1",
-              name: "my progress 1",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
-            },
-            {
-              id: "i2",
-              name: "my progress 2",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
-            },
-            {
-              id: "i3",
-              name: "my progress 3",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
-            }
-          ]
+          pipelineItems: []
         },
         {
+          id: '',
+          createdAt: null!,
+          deletedAt: null!,
+          updatedAt: null!,
           name: "report",
           pipeline: "string",
-          pipelineItems: [
-            {
-              id: "r1",
-              name: "my report 1",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
-            }
-          ]
-        },
-        {
-          name: "done",
-          pipeline: "string",
-          pipelineItems: [
-            {
-              id: "d1",
-              name: "done 1",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
-            }
-          ]
-        },
-        {
-          name: "done2",
-          pipeline: "string",
-          pipelineItems: [
-            {
-              id: "d2",
-              name: "done 1",
-              createdAt: null!,
-              deletedAt: null!,
-              updatedAt: null!,
-              pipelineColumn: null!
-            }
-          ]
+          pipelineItems: []
         }
       ]
     }
   ]
 
-  const totalColumn = pipeLineDataApi[0].pipelineColumns.length;
+  const totalColumn = pipeLineDataApi[0].pipelineColumns.length || 1;
   const widthOfItem = 333;
 
   const {
@@ -172,11 +106,7 @@ export const Pipeline = () => {
 
   return (
     <>
-      <WrapperRowTitle
-        title="Agreements"
-        titleSize="27px"
-        children={<SearchBar placeholder="Search for id, name or phone number" />}
-      />
+      <PageTitlePipeline />
       <ScrollBarHorizontal>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable
@@ -191,7 +121,7 @@ export const Pipeline = () => {
                 {...providedColumns.droppableProps}
                 ref={providedColumns.innerRef}
               >
-                {pipeline[0].pipelineColumns.map((pipeline, index) =>
+                {pipeline[0].pipelineColumns.map((pipeline: IPipelineColumn, index: number) =>
                   <PipeLineColumn index={index} key={pipeline.name} pipelineColumn={pipeline} />)
                 }
                 {providedColumns.placeholder}

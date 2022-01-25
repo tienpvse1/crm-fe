@@ -1,5 +1,5 @@
 import { ClockCircleOutlined, FlagOutlined, MessageOutlined } from "@ant-design/icons";
-import { IPipelineItem } from "@interfaces/pipeline";
+import { IPipelineItem } from "@modules/pipeline-items/entity/pipeline-items.entity";
 import { Avatar, Card, Divider, Tag } from "antd"
 const { Meta } = Card;
 

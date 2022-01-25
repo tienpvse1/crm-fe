@@ -6,6 +6,7 @@ export const AdminColumnChart = () => {
   return (
     <>
       <WrapperRowTitle
+        className="wrapper-title-page"
         title="Claims Over The Years"
         titleSize="21px"
         children={

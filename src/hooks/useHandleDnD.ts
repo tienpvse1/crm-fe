@@ -1,4 +1,5 @@
-import { IPipeline, IPipelineColumn } from "@interfaces/pipeline";
+import { IPipelineColumn } from "@modules/pipeline-column/entity/pipeline-column.entity";
+import { IPipeline } from "@modules/pipeline/entity/pipeline.entity";
 import { useState } from "react";
 
 export const useHandleDnD = (data: IPipeline[]) => {

@@ -94,3 +94,16 @@
     @extend .arrow;
     border-radius: 50px 0px 0px 50px;
 }
+
+.button-filter-pipeline {
+    margin-right: 10px;
+    @extend .button-ant-custom-style;
+}
+
+.button-more-pipeline {
+    @extend .button-ant-custom-style;
+}
+
+.button-create-task-pipeline {
+    @extend .button-ant-custom-style
+}

@@ -7,6 +7,11 @@
     height: 90px;
 }
 
+.wrapper-title-page-2 {
+    height: 60px;
+    @extend .wrapper-title-page;
+}
+
 .title-admin-page {
     font-weight: 550;
     width: 100%;
