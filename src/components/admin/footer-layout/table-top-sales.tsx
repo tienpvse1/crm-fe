@@ -59,6 +59,7 @@ export const TableTopSales = () => {
   return (
     <>
       <WrapperRowTitle
+        className="wrapper-title-page"
         title="Top Sales Rep"
         titleSize="21px"
       />

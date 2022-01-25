@@ -1,6 +1,7 @@
-import { IPipelineColumn, IPipelineItem } from '@interfaces/pipeline'
+import { IPipelineColumn } from '@modules/pipeline-column/entity/pipeline-column.entity'
+import { IPipelineItem } from '@modules/pipeline-items/entity/pipeline-items.entity'
 import { Draggable, Droppable } from 'react-beautiful-dnd'
-import { PipelineCardItem } from './card-item'
+import { PipelineCardItem } from './pipeline-items/card-item'
 
 interface PipelineItemsProps {
   pipelineColumn: IPipelineColumn;

@@ -52,6 +52,7 @@ export const AdminPage = () => {
   return (
     <>
       <WrapperRowTitle
+        className="wrapper-title-page"
         title="OverView"
         titleSize="27px"
         children={<SearchBar placeholder="Search for id, name or phone number" />}

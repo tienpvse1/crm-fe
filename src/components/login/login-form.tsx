@@ -12,11 +12,11 @@ export const LoginForm = () => {
   const handleLogin = async (authDto: IAuthDto) => {
     mutate(authDto);
   };
-  if (data) {
-    const publicData = JSON.stringify(data.data.publicData);
+  if (data) {    
+    const publicData = JSON.stringify(data.publicData);
     setCookie(PUBLIC_USER_INFO, publicData || '', 7);
 
-    if(data.data.publicData.role == Role.ADMIN)
+    if(data.publicData.role == Role.ADMIN)
       return <Navigate to={'/admin'} replace />;
 
     return <Navigate to={'/'} replace />;

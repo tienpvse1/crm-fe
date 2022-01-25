@@ -65,31 +65,7 @@
     align-items: center;
 }
 
-.ant-input {
-    border-radius: 10px !important;
-    height: 40px;
-}
-
-.ant-divider-horizontal.ant-divider-with-text-center {
-    &::before,
-    &::after {
-        border-top: 1px solid black !important;
-        width: 10% !important;
-        min-width: 15%;
-    }
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ant-divider-inner-text {
-    font-size: 13px;
-}
-
 .footer-login-from {
-    .ant-btn {
-        margin: 5px;
-    }
     padding-bottom: 15px;
 }
 
