@@ -3,7 +3,7 @@ import { MenuProfile } from './dropdown/dropdown-profile';
 
 export const DropdownProfile = () => {
   return (
-    <Dropdown overlay={<MenuProfile />}>
+    <Dropdown overlay={<MenuProfile />} trigger={['click']}>
       <div className='ant-dropdown-link'>
         <Avatar
           src='https://joeschmoe.io/api/v1/random'
