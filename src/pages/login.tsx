@@ -44,7 +44,7 @@ export const LoginPage = () => {
             <GoogleButton onClick={handleGoogleClick} />
           </div>
         </div>
-        <a href=''>Chính sách bảo mật</a>
+        <a href='#'>Chính sách bảo mật</a>
       </motion.div>
     </div>
   );
